@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+    <title>Gradejoy Dashboard</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,9 +45,12 @@
           <ul class="nav navbar-nav">
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classes <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Create NewCourse</a></li>
+                <li><a href="#">Create New Class</a></li>
+                <li><a href="#">Active Classes</a></li>
+                <li><a href="#">Past Classes</a></li>
+                <li><a href="#">Trashed Classes</a></li>
               </ul>
             </li>
 
@@ -75,7 +78,20 @@
 
     <div class="container">
 
+      <button class="btn btn-primary" type="submit">Create New Class</button>
 
+      <div class="dropdown">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+          Classes
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+          <li><a href="#">Period 1</a></li>
+          <li><a href="#">Period 2</a></li>
+          <li><a href="#">Period 3</a></li>
+          <li><a href="#">Period 4</a></li>
+        </ul>
+      </div>
 
     </div> <!-- /container -->
 
