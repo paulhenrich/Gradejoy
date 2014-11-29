@@ -11,10 +11,10 @@
     <title>Gradejoy Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <!-- Custom styles for this template -->
-    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -43,32 +43,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Classes <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Create New Class</a></li>
-                <li><a href="#">Active Classes</a></li>
-                <li><a href="#">Past Classes</a></li>
-                <li><a href="#">Trashed Classes</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tools <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Wikis</a></li>
-                <li><a href="#">Flashcards</a></li>
-                <li><a href="#">Quizzes</a></li>
-              </ul>
-            </li>
-
+            <li><a href="#">Gradebook</a></li>
             <li><a href="#">Communication</a></li>
-
             <li><a href="#">Account</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><img src="profile.png"></a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
@@ -78,7 +58,7 @@
 
     <div class="container">
 
-      <button class="btn btn-primary" type="submit">Create New Class</button>
+      <button class="btn btn-primary btn-sm" type="submit">Create New Class</button>
 
       <div class="dropdown">
         <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -92,15 +72,26 @@
           <li><a href="#">Period 4</a></li>
         </ul>
       </div>
-
+    </br>
+    </br>
     </div> <!-- /container -->
-
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <p class="pull-left">
+          <a href="#">Active Classes</a>&middot;
+          <a href="#">Inactive Classes</a>
+        </p>
+        <p class="pull-right">
+          <a href="#">Privacy</a> &middot;
+          <a href="#">Terms</a> &middot;
+          <a href="https://github.com/robertlandreaux/Gradejoy">Source Code</a>
+        </p>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>

@@ -1,0 +1,37 @@
+html,body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding-top: 5em;
+}
+
+.dropdown {
+  float: right;
+}
+
+img {
+  height:2.1em;
+  width: 2.1em;
+}
+
+.btn {
+  font-size: 80%;
+}
+
+.navbar-brand {
+  font-size: 160%;
+  font-family: Impact, Charcoal, sans-serif;
+  padding: .7em;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.navbar-fixed-bottom p {
+  padding: 1% 2%;
+  text-align: center;
+  font-size: 75%;
+}
