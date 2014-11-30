@@ -31,6 +31,7 @@
 <body>
 
   <!-- Fixed navbar -->
+<div id="wrap">
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -45,32 +46,47 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="#">About Gradejoy</a></li>
-          <li><a href="#">Testimonials</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Join Now <span class="sr-only">(current)</span></a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
-    </div>
+      </div>
   </nav>
 
+  <div="container">
   <!-- Jumbotron -->
   <div class="jumbotron">
     <h2>Experience Gradejoy.</h2>
-    <p class="lead">Gradejoy is a simple, intuitive, and easy to use gradebook application for teachers and students.</p>
-    <p><a class="btn btn-lg btn-primary" href="#" role="button">Create a free account</a></p>
+    <p class="lead">Gradejoy is a simple, intuitive, and easy-to-use gradebook application for teachers and students.</p>
+    <p><a class="btn btn-lg btn-primary" href="#" role="button" style="font-size:80%">Create a free account</a></p>
   </div>
 
-  <div class="navbar navbar-default navbar-fixed-bottom">
+  <form class="form-signin" role="form">
+    <h2 class="form-signin-heading">Gradejoy Login</h2> </br>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" class=".col-xs-12 .col-sm-6 .col-md-8" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label></br> </br>
+    <input type="password" id="inputPassword" class=".col-xs-12 .col-sm-6 .col-md-8" placeholder="Password" required>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-primary btn-md" type="submit" style="font-size:110%">Sign in</button>
+  </form>
+  </br>
+  <a href="#">Forgot email address?</a></br></br>
+  <a href="#">Forgot password?</a>
+</div> <!--container-->
+</div> <!--wrap-->
+
+  <div id="footer">
     <p>
       <a href="#">Privacy</a> &middot;
       <a href="#">Terms</a> &middot;
       <a href="https://github.com/robertlandreaux/Gradejoy">Source Code</a>
     </p>
   </div>
+
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
