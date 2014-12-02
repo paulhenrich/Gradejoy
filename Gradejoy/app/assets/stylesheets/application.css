@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ html,body {
+   height: 100%;
+ }
+
+ body {
+   padding-top: 5em;
+ }
+
+ img {
+   height:1.5em;
+   width: 1.5em;
+   margin-top: 1em;
+ }
+
+ .btn {
+   font-size: 70%;
+ }
+
+ .navbar-brand {
+   font-size: 160%;
+   font-family: Impact, Charcoal, sans-serif;
+   padding: .7em;
+ }
+
+ .jumbotron {
+   text-align: center;
+ }
+
+ #wrap {
+   min-height: 100%;
+   height: auto;
+   margin: 0 auto 50em auto;
+   padding: 0 5% 15% 5%;
+ }
+
+ .container {
+   padding-right: 2%;
+   padding-left: 2%;
+ }
+
+ #footer p {
+   height: 1em;
+   background-color: #f5f5f5;
+   padding: 1% 2% 3% 2%;
+   text-align: center;
+   font-size: .75em;
+ }
+
+ .dropdown {
+   float: right;
+ }
+
+ .form-signin {
+   float: left;
+ }
+
+ #new-account {
+   float: right;
+   margin-top: 0;
+ }
