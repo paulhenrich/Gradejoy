@@ -1,0 +1,18 @@
+<%= render "dashboard/navbar" %>
+<div class="container">
+
+  <button class="btn btn-primary btn-sm" type="submit">Create New Class</button>
+
+  <div class="dropdown">
+    <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+      Classes
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      <li><%= link_to "Spanish I", dashboard_spanish1_path %></li>
+    </ul>
+  </div>
+
+</div> <!--/container -->
+</div> <!-- /wrap -->
+<%= render "dashboard/footer" %>

@@ -3,10 +3,23 @@ Gradejoy::Application.routes.draw do
   get "login/contact"
   get "login/privacy"
   get "login/terms"
-  get "dashboard/dashboard"
-  get "dashboard/help"
+  get "login/forgot_email"
+  get "login/forgot_password"
+  get "login/help"
+
+  get "dashboard/index"
+  get "dashboard/gradebook"
+  get "dashboard/communication"
   get "dashboard/account"
-  get "login/index"
+  get "dashboard/help"
+  get "dashboard/logout"
+  get "dashboard/spanish1"
+  get "dashboard/about"
+  get "dashboard/contact"
+  get "dashboard/privacy"
+  get "dashboard/terms"
+
+  root "login#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

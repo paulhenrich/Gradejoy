@@ -1,3 +1,7 @@
-Gradejoy is an online gradebook program for students and teachers.
+Gradejoy is an online gradebook application for students and teachers.
+
+Rails version 4.0.0
+
+Ruby version 2.0.0
 
 This project is on Pivotal Tracker at https://www.pivotaltracker.com/n/projects/1215932.

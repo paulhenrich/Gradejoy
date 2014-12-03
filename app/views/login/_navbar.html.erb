@@ -1,0 +1,22 @@
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to 'Gradejoy', root_path, class:"navbar-brand" %>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'About Gradejoy', login_about_path %></li>
+          <li><%= link_to 'Contact Us', login_contact_path %></li>
+          <li><%= link_to 'Help', login_help_path %></li>
+          <li><%= link_to 'Privacy', login_privacy_path %></li>
+          <li><%= link_to 'Terms', login_terms_path %></li>
+          <li><%= link_to 'Source Code', "https://github.com/robertlandreaux/Gradejoy", :target => "_blank" %></li>
+        </ul>
+      </div>
+    </nav>

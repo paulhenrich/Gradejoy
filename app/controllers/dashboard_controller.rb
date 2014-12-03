@@ -1,10 +1,23 @@
 class DashboardController < ApplicationController
-  def dashboard
+  def index
+  end
+
+  def gradebook
+  end
+
+  def communication
+  end
+
+  def account
   end
 
   def help
   end
 
-  def account
+  def logout
   end
+
+  def spanish1
+  end
+  
 end
