@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'rails_12factor', '0.0.2'
+gem 'newrelic_rpm'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
