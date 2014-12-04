@@ -9,6 +9,7 @@ gem 'pg', '0.17.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~>3.3.1'
+
 #use Autoprefixer with Bootstrap to add browser vendor prefixes automatically
 gem 'autoprefixer-rails'
 gem 'sprockets-rails'
