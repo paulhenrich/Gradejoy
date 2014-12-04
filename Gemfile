@@ -8,6 +8,10 @@ gem 'pg', '0.17.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~>3.3.1'
+#use Autoprefixer with Bootstrap to add browser vendor prefixes automatically
+gem 'autoprefixer-rails'
+gem 'sprockets-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,6 +33,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'rails_12factor', '0.0.2'
 gem 'newrelic_rpm'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

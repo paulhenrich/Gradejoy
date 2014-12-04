@@ -9,12 +9,8 @@
   <%= favicon_link_tag "favicon.ico" %>
   <title>Gradejoy</title>
 
-  <!-- Bootstrap core CSS -->
-  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" %>
-  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" %>
-
   <!-- Custom styles for this template -->
-  <%= stylesheet_link_tag "application.css" %>
+  <%= stylesheet_link_tag "application.css.scss" %>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -31,14 +27,7 @@
   <div id="wrap">
 
       <%= yield %>
-
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" %>
-    <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" %>
+      
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <%= javascript_include_tag "ie10-viewport-bug-workaround.js" %>
 </body>

@@ -19,5 +19,10 @@ class DashboardController < ApplicationController
 
   def spanish1
   end
-  
+
+  def privacy
+  end
+
+  def terms
+  end
 end
