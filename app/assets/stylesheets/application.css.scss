@@ -16,10 +16,9 @@
 
  html,body {
    height: 100%;
- }
-
- body {
-   padding-top: 5em;
+   body {
+     padding-top: 5em;
+   }
  }
 
  img {
@@ -74,4 +73,9 @@
  #new-account {
    float: right;
    margin-top: 0;
+ }
+
+ h3 {
+   margin-top: 0;
+   padding-top: 0;
  }

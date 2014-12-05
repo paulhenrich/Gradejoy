@@ -1,8 +1,11 @@
 Gradejoy::Application.routes.draw do
-  get "login/about"
-  get "login/contact"
-  get "login/privacy"
-  get "login/terms"
+  get "about" => "pages#about"
+  get "contact" => "pages#contact"
+  get "help" => "pages#help"
+  get "privacy" => "pages#privacy"
+  get "terms" => "pages#terms"
+
+  devise_for :users
   get "login/forgot_email"
   get "login/forgot_password"
   get "login/help"
@@ -11,13 +14,8 @@ Gradejoy::Application.routes.draw do
   get "dashboard/gradebook"
   get "dashboard/communication"
   get "dashboard/account"
-  get "dashboard/help"
   get "dashboard/logout"
   get "dashboard/spanish1"
-  get "dashboard/about"
-  get "dashboard/contact"
-  get "dashboard/privacy"
-  get "dashboard/terms"
 
   root "login#index"
   # The priority is based upon order of creation: first created -> highest priority.

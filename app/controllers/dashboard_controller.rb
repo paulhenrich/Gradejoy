@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
+  before_action :authenticate_user!
   def index
   end
 
@@ -11,18 +12,10 @@ class DashboardController < ApplicationController
   def account
   end
 
-  def help
-  end
-
   def logout
   end
 
   def spanish1
   end
 
-  def privacy
-  end
-
-  def terms
-  end
 end
