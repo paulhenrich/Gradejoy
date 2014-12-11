@@ -11,11 +11,6 @@ class DashboardControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get help" do
-    get :help
-    assert_response :success
-  end
-
   test "should get communication" do
     get :communication
     assert_response :success

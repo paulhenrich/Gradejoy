@@ -1,4 +1,10 @@
 Gradejoy::Application.routes.draw do
+  resources :courses
+
+  resources :assignments
+
+  resources :students
+
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   get "help" => "pages#help"
