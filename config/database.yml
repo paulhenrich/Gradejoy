@@ -19,8 +19,6 @@ development:
   encoding: unicode
   database: gradejoy_development
   pool: 5
-  username: gradejoy
-  host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +46,10 @@ test:
   encoding: unicode
   database: gradejoy_test
   pool: 5
-  username: gradejoy
-  host: localhost
+
 
 production:
   adapter: postgresql
   encoding: unicode
   database: gradejoy_production
   pool: 5
-  username: gradejoy
-  host: localhost

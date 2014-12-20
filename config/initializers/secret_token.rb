@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Gradejoy::Application.config.secret_key_base = '0e9d6d05e9a8283e70b005e862fad5b2619cdf1f0b4d6ea54c83ec2a8c165b8d0132ee7bef2c292331fb0d48c64602c9c679ebd36986f21c9c9acb43fc023588'
+Gradejoy::Application.config.secret_key_base = 'e3d216d589c4441ea006d25582e8c477c3dad140e5c4adc341c2f44b801913f11b16684437dd7d311cc325c92f32915179a09aedfa48edcdaf127d99cd686b64'
