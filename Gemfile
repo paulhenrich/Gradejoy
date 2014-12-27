@@ -32,7 +32,7 @@ gem 'turbolinks', '~>2.5.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
+gem 'rails_12factor', '~>0.0.3'
 gem 'newrelic_rpm', '~>3.9.8.273'
 gem 'devise', '~>3.0'
 
