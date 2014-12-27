@@ -12,7 +12,6 @@ Gradejoy::Application.routes.draw do
   get "terms" => "pages#terms"
   get "account" => "pages#account"
   get "communication" => "pages#communication"
-  get "gradebook" => "pages#gradebook"
 
   devise_for :users
 

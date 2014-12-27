@@ -13,4 +13,14 @@ class PagesController < ApplicationController
 
   def terms
   end
+
+  def communication
+  end
+
+  def index
+  end
+
+  def account
+  end
+  
 end
