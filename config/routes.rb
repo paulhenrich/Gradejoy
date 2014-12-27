@@ -10,20 +10,13 @@ Gradejoy::Application.routes.draw do
   get "help" => "pages#help"
   get "privacy" => "pages#privacy"
   get "terms" => "pages#terms"
+  get "account" => "pages#account"
+  get "communication" => "pages#communication"
+  get "gradebook" => "pages#gradebook"
 
   devise_for :users
-  get "login/forgot_email"
-  get "login/forgot_password"
-  get "login/help"
 
-  get "dashboard/index"
-  get "dashboard/gradebook"
-  get "dashboard/communication"
-  get "dashboard/account"
-  get "dashboard/logout"
-  get "dashboard/spanish1"
-
-  root "login#index"
+  root "pages#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
