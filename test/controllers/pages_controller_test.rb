@@ -26,4 +26,19 @@ class PagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get index" do
+    get :index
+    assert_response :success
+  end
+
+  test "should get account" do
+    get :account
+    assert_response :success
+  end
+
+  test "should get communication" do
+    get :communication
+    assert_response :success
+  end
+
 end
