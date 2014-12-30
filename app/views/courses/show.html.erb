@@ -4,5 +4,29 @@
   <li><strong>Time:</strong> <%= handle_not_set @course.time %></li>
   <li><strong>Period:</strong> <%= handle_not_set @course.period %></li>
 </ul>
+
+<h3>Enrolled Students</h3>
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course.students.each do |student| %>
+    <tr>
+      <td><%= link_to 'Show', student %></td>
+      <td><%= link_to 'Edit', edit_student_path(student) %></td>
+      <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
