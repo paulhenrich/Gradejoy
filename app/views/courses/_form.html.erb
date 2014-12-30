@@ -11,7 +11,20 @@
     </div>
   <% end %>
 
+  <%= form_for @course do |f| %>
+  <%= f.label :course_name %>(required)
+  <%= f.text_field :course_name %><br /><br />
+
+  <%= f.label :time_of_day %>
+  <%= f.text_field :time %><br /><br />
+
+  <%= f.label :period %>
+  <%= f.text_field :period %><br /><br />
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <% end %>
+
 <% end %>

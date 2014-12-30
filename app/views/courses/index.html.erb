@@ -1,4 +1,4 @@
-<h1>Gradebook</h1>
+<h2>Gradebook</h2>
 
 <table>
   <thead>
@@ -22,4 +22,15 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+
+<%= link_to 'Create New Course', new_course_path, class: "btn btn-primary btn-sm", id: "createbutton" %>
+
+<div class="dropdown">
+  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+    Classes
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li></li>
+  </ul>
+</div>

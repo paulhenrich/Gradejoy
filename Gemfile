@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '0.17.1'
@@ -33,7 +33,6 @@ gem 'turbolinks', '~>2.5.3'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'rails_12factor', '~>0.0.3'
-gem 'newrelic_rpm', '~>3.9.8.273'
 gem 'devise', '~>3.0'
 
 gem 'figaro', '~>1.0.0'

@@ -23,7 +23,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     @course.save
-    respond_with(@course)
+    redirect_to @course
   end
 
   def update
@@ -42,6 +42,6 @@ class CoursesController < ApplicationController
     end
 
     def course_params
-      params[:course]
+      params.require(:course).permit(:course_name, :time, :period)
     end
 end
