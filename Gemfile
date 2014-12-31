@@ -32,7 +32,6 @@ gem 'turbolinks', '~>2.5.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'rails_12factor', '~>0.0.3'
 gem 'devise', '~>3.0'
 
 gem 'figaro', '~>1.0.0'
@@ -47,7 +46,6 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-gem 'unicorn', '~>4.8.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
