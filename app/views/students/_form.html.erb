@@ -11,7 +11,28 @@
     </div>
   <% end %>
 
+  <%= form_for @student do |f| %>
+  <%= f.label :first_name %> (required)
+  <%= f.text_field :first_name %><br /><br />
+
+  <%= f.label :last_name %> (required)
+  <%= f.text_field :last_name %><br /><br />
+
+  <%= f.label :grade_level %> (numbers only)
+  <%= f.text_field :grade_level %><br /><br />
+
+  <%= f.label :birth_month %> (numbers only)
+  <%= f.text_field :birth_month %><br /><br />
+
+  <%= f.label :birth_day %> (numbers only)
+  <%= f.text_field :birth_day %><br /><br />
+
+  <%= f.label :birth_year %> (numbers only)
+  <%= f.text_field :birth_year %><br /><br />
+
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
+
 <% end %>

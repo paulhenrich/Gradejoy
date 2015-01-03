@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150103172802) do
+ActiveRecord::Schema.define(version: 20150103183626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,20 @@ ActiveRecord::Schema.define(version: 20150103172802) do
   create_table "students", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "grade_level"
+    t.integer  "birth_month"
+    t.integer  "birth_day"
+    t.integer  "birth_year"
   end
+
+  add_index "students", ["birth_day"], name: "index_students_on_birth_day", using: :btree
+  add_index "students", ["birth_month"], name: "index_students_on_birth_month", using: :btree
+  add_index "students", ["birth_year"], name: "index_students_on_birth_year", using: :btree
+  add_index "students", ["first_name"], name: "index_students_on_first_name", using: :btree
+  add_index "students", ["grade_level"], name: "index_students_on_grade_level", using: :btree
+  add_index "students", ["last_name"], name: "index_students_on_last_name", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
