@@ -1,6 +1,7 @@
 <p class= "notice"><%= notice %></p>
 <p class= "alert"><%= alert %></p>
 <h2>Gradebook</h2>
+<% if course.user == current_user %>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead>
@@ -18,5 +19,6 @@
     </tbody>
   </table>
 </div>
+<% end %>
 
 <%= link_to 'Create New Course', new_course_path, class: "btn btn-primary btn-sm", id: "createbutton" %>
