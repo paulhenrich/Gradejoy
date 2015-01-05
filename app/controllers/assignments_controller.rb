@@ -22,8 +22,12 @@ class AssignmentsController < ApplicationController
 
   def create
     @assignment = Assignment.new(assignment_params)
-    @assignment.save
-    respond_with(@assignment)
+
+    if @assignment.save
+      redirect_to @assignment
+    else
+      render :new
+    end
   end
 
   def update
@@ -42,6 +46,6 @@ class AssignmentsController < ApplicationController
     end
 
     def assignment_params
-      params[:assignment]
+      params.require(:assignment).permit(:title, :date_created, :date_due, :category, :total_points)
     end
 end

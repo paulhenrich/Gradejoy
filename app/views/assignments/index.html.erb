@@ -1,25 +1,31 @@
-<h1>Listing assignments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @assignments.each do |assignment| %>
+<h3>Created Assignments</h3>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= link_to 'Show', assignment %></td>
-        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
-        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Date_Created</th>
+        <th>Date_Due</th>
+        <th>Category</th>
+        <th>Total Points</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @assignments.each do |assignment| %>
+      <tr>
+        <td><%= link_to assignment.title, assignment %></td>
+        <td><% assignment.date_created %></td>
+        <td><% assignment.date_due %></td>
+        <td><% assignment.category %></td>
+        <td><% assignment.total_points %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
-<%= link_to 'New Assignment', new_assignment_path %>
+<%= link_to 'New Assignment', new_assignment_path %><br /><br />
+<%= link_to 'Back to Courses', courses_path %>
