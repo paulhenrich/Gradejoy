@@ -15,6 +15,10 @@
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
+      <th>Grade Level</th>
+      <% @assignments.each do |assignment| %>
+      <th><%= assignment %></th>
+      <% end %>
     </tr>
   </thead>
 
@@ -28,5 +32,3 @@
   </tbody>
 </table>
 </div>
-
-<%= link_to 'Add New Student', new_student_path %> <br /><br />

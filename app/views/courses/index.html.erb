@@ -1,23 +1,35 @@
-<p class= "notice"><%= notice %></p>
-<p class= "alert"><%= alert %></p>
-<h2>Gradebook</h2>
-
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Course Name</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @courses.each do |course| %>
+<%if user_signed_in? %>
+  <h2>Gradebook</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
         <tr>
-          <td><%= link_to course.name, course %></td>
+          <th>Course Name</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
 
-<%= link_to 'Create New Course', new_course_path, class: "btn btn-primary btn-sm", id: "createbutton" %>
+      <tbody>
+        <% @courses.each do |course| %>
+          <tr>
+            <td><%= link_to course.name, course %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= link_to 'Create New Course', new_course_path, class: "btn btn-primary btn-med", id: "createbutton" %> <br /><br />
+
+  <%= link_to 'Create New Student', new_student_path %> <br /><br />
+
+  <%= link_to 'View Created Students', students_path %>
+
+<% else %>
+  <div class="jumbotron">
+    <h2>Experience Gradejoy.</h2>
+    <br />
+    <p class="lead">Gradejoy is a simple, intuitive, and easy-to-use gradebook application for teachers and students.</p>
+    <br />
+    <h4>Begin by clicking "Login or Sign up" at the top right of the page.</h4>
+    <h4>This application is still under construction. Many features are still in progress.</h4>
+  </div>
+<% end %>
