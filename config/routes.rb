@@ -13,7 +13,7 @@ Gradejoy::Application.routes.draw do
   get "account" => "pages#account"
   get "communication" => "pages#communication"
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
   root "courses#index"
   # The priority is based upon order of creation: first created -> highest priority.

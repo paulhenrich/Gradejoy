@@ -32,9 +32,15 @@ gem 'turbolinks', '~>2.5.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'devise', '~>3.0'
 
+gem 'devise', '~>3.0'
 gem 'figaro', '~>1.0.0'
+gem 'omniauth'
+gem 'omniauth-digitalocean'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google'
+gem 'omniauth-amazon'
 
 
 group :doc do
