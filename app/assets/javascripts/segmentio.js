@@ -50,7 +50,7 @@ window.analytics.SNIPPET_VERSION = '2.0.9';
 
 // Load Analytics.js with your key, which will automatically
 // load the tools you've enabled for your account. Boosh!
-window.analytics.load('ENV['SEGMENT_IO_TOKEN']');
+window.analytics.load('QJpsHWvSvLinDfLyOmaw4JHPbRoEEb40');
 
 // Make the first page call to load the integrations. If
 // you'd like to manually name or tag the page, edit or

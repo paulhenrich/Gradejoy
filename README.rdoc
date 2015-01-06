@@ -6,6 +6,6 @@ Ruby version 2.0.0
 
 This project is on Pivotal Tracker at https://www.pivotaltracker.com/n/projects/1215932.
 
-Visit http://gradejoy.herokuapp.com.
+Visit http://gradejoy.com.
 
 This project is still in progess and not every feature works yet.
