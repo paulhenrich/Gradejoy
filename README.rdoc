@@ -1,11 +1,22 @@
 Gradejoy is an online gradebook application for students and teachers.
 
-Rails version 4.0.0
+Rails version 4.0.2.
 
-Ruby version 2.0.0
+Ruby version 2.1.3.
 
 This project is on Pivotal Tracker at https://www.pivotaltracker.com/n/projects/1215932.
 
 Visit http://gradejoy.com.
 
-This project is still in progess and not every feature works yet.
+This project is still in progess; not every feature works yet.
+
+To run this locally, you need to have Ruby version 2.1.3 and Rails version 4.0.2 installed.
+You will need to place a secret key in config/initializers/secret_token.rb on line 12 in
+place of ENV["SECRET_TOKEN"]. You can use `rake secret` in the command line to
+generate your secret key. You will also need to place a secret key at the end of
+config/initializers/devise.rb. Then run `rake db:setup` in your command line.
+Run `rails s` in your command line. The application should run at localhost:3000
+in your browser.
+
+Email any questions, comments, or criticisms to robertlandreaux@gmail.com.
+Feel free to contribute to this project!   
