@@ -14,8 +14,7 @@ To run this locally, you need to have Ruby version 2.1.3 and Rails version 4.0.2
 You will need to place a secret key in config/initializers/secret_token.rb on line 12 in
 place of ENV["SECRET_TOKEN"]. You can use `rake secret` in the command line to
 generate your secret key. You will also need to place a secret key at the end of
-config/initializers/devise.rb in the place of ENV["DEVISE_SECRET_KEY"]. You can also
-use the Figaro gem (https://github.com/laserlemon/figaro) if you would like to handle environment variables.
+config/initializers/devise.rb in the place of ENV["DEVISE_SECRET_KEY"]. The Figaro gem (https://github.com/laserlemon/figaro) is an option to handle environment variables.
 Then run `rake db:setup` in your command line. Run `rails s` in your command line. The application should run at localhost:3000
 in your browser.
 
