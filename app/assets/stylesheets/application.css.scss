@@ -45,7 +45,7 @@
  #wrap {
    min-height: 100%;
    height: auto;
-   margin: 0 auto 50em auto;
+   margin: 0 auto 0em auto;
    padding: 0 5% 15% 5%;
  }
 
@@ -70,3 +70,8 @@
    margin-top: 0;
    padding-top: 0;
  }
+
+textarea {
+  height: 20em;
+  width: 70%;
+}
