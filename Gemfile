@@ -37,10 +37,6 @@ gem 'devise', '~>3.0'
 gem 'figaro', '~>1.0.0'
 gem 'omniauth'
 gem 'omniauth-digitalocean'
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'omniauth-google'
-gem 'omniauth-amazon'
 
 
 group :doc do

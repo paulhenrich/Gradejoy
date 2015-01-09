@@ -23,6 +23,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
+    #@course = @student.courses.create(params[:course_enrollment].permit(:first_name, :last_name))
 
     if @student.save
       redirect_to @student

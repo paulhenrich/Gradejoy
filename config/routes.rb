@@ -1,4 +1,6 @@
 Gradejoy::Application.routes.draw do
+  devise_for :admins
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   resources :courses
 
   resources :assignments
@@ -12,8 +14,6 @@ Gradejoy::Application.routes.draw do
   get "terms" => "pages#terms"
   get "account" => "pages#account"
   get "communication" => "pages#communication"
-
-  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
   root "courses#index"
   # The priority is based upon order of creation: first created -> highest priority.
