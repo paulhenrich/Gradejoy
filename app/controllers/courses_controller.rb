@@ -1,21 +1,23 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
-  before_action :authorized_user, only: [:edit, :update, :destroy]
+  before_action :authorized_user, only: [:show, :edit, :update, :destroy]
   respond_to :html
 
   def index
-    @courses = Course.all
+    if user_signed_in?
+      @courses = current_user.courses
+    end
     respond_with(@courses)
   end
 
   def show
     @assignments = Assignment.all
-    respond_with(@course)
+      respond_with(@course)
   end
 
   def new
-    @course = current_user.courses.build
+    @course = current_user.courses.new
     respond_with(@course)
   end
 
@@ -23,7 +25,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = current_user.courses.build(course_params)
+    @course = current_user.courses.new(course_params)
 
     if @course.save
       redirect_to @course
@@ -53,6 +55,6 @@ class CoursesController < ApplicationController
 
     def authorized_user
       @course = current_user.courses.find_by(id: params[:id])
-      redirect_to courses_path, notice: "Not authorized to edit this course" if @course.nil?
+      redirect_to courses_path, notice: "Not authorized to view that course" if @course.nil?
     end
 end
