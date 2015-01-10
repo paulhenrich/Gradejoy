@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150109014536) do
+ActiveRecord::Schema.define(version: 20150110180718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,11 @@ ActiveRecord::Schema.define(version: 20150109014536) do
     t.string   "category"
     t.decimal  "points_earned"
     t.decimal  "total_points"
+    t.integer  "course_id"
   end
 
   add_index "assignments", ["category"], name: "index_assignments_on_category", using: :btree
+  add_index "assignments", ["course_id"], name: "index_assignments_on_course_id", using: :btree
   add_index "assignments", ["date_created"], name: "index_assignments_on_date_created", using: :btree
   add_index "assignments", ["date_due"], name: "index_assignments_on_date_due", using: :btree
   add_index "assignments", ["points_earned"], name: "index_assignments_on_points_earned", using: :btree
