@@ -13,7 +13,7 @@ class CoursesController < ApplicationController
 
   def show
     @assignments = Assignment.all
-      respond_with(@course)
+    respond_with(@course)
   end
 
   def new
