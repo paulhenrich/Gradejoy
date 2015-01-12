@@ -1,4 +1,5 @@
 Gradejoy::Application.routes.draw do
+
   devise_for :admins
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   resources :courses
@@ -6,6 +7,8 @@ Gradejoy::Application.routes.draw do
   resources :assignments
 
   resources :students
+
+  resources :course_enrollments
 
   get "about" => "pages#about"
   get "contact" => "pages#contact"
