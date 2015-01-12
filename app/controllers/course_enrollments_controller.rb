@@ -1,7 +1,6 @@
 class CourseEnrollmentsController < ApplicationController
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
+  before_action :set_course_enrollment, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:index, :show]
-  before_action :authorized_user, only: [:show, :edit, :update, :destroy]
   respond_to :html
 
   def index
@@ -12,7 +11,7 @@ class CourseEnrollmentsController < ApplicationController
   end
 
   def new
-    @course_enrollments = CourseEnrollment.new
+    @course_enrollment = CourseEnrollment.new
     respond_with(@course_enrollment)
   end
 
@@ -34,7 +33,7 @@ class CourseEnrollmentsController < ApplicationController
   end
 
   def update
-    @course_enrollment.update(assignment_params)
+    @course_enrollment.update(course_enrollment_params)
     respond_with(@course_enrollment)
   end
 
@@ -48,8 +47,8 @@ class CourseEnrollmentsController < ApplicationController
       @course_enrollment = CourseEnrollment.find(params[:id])
     end
 
-    def assignment_params
-      params.require(:course, :student, :course_enrollment).permit(:id, :student.id, :student.first_name, :student.last_name, :course.id, :course.course_name)
+    def course_enrollment_params
+      params.require(:course_enrollment).permit(:student_id, :first_name, :last_name, :course_id, :course_name)
     end
 
 end

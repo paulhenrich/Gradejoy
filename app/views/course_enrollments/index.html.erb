@@ -3,22 +3,24 @@
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
+        <th>Student ID</th>
+        <th>Course ID</th>
+        <th>Enrollment ID</th>
         <th>Student First Name</th>
         <th>Student Last Name</th>
-        <th>Student ID</th>
+
         <th>Course Name</th>
-        <th>Course ID</th>
+
       <tr>
     </thead>
 
     <tbody>
       <% @course_enrollments.each do |course_enrollment| %>
       <tr>
-        <td><%= @student.first_name %></td>
-        <td><%= last_name %></td>
-        <td><%= id %></td>
-        <td><%= course_name %></td>
-        <td><%= course_id %></td>
+        <td><%= course_enrollment.student_id %></td>
+        <td><%= course_enrollment.course_id %></td>
+        <td><%= course_enrollment.id %></td>
+        <td><%= course_enrollment.first_name_id %></td>
       <% end %>
     <tbody>
   </table>
