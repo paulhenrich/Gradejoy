@@ -28,7 +28,11 @@
   <%= f.text_field :total_points %><br /><br />
 
   <div class="actions">
-    <%= f.submit "Update", class:"btn btn-primary btn-md" %>
+    <% if current_page? new_assignment_path %>
+      <%= f.submit "Submit", class:"btn btn-primary btn-md" %>
+    <% else %>
+      <%= f.submit "Update", class:"btn btn-primary btn-md" %>
+    <% end %>
   </div>
 
   <% end %>

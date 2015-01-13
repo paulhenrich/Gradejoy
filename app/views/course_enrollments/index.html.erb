@@ -8,9 +8,7 @@
         <th>Enrollment ID</th>
         <th>Student First Name</th>
         <th>Student Last Name</th>
-
         <th>Course Name</th>
-
       <tr>
     </thead>
 
@@ -19,9 +17,14 @@
       <tr>
         <td><%= course_enrollment.student_id %></td>
         <td><%= course_enrollment.course_id %></td>
-        <td><%= course_enrollment.id %></td>
-        <td><%= course_enrollment.first_name_id %></td>
+        <td><%= link_to course_enrollment.id, course_enrollment %></td>
+        <td><%= course_enrollment.first_name %></td>
+        <td><%= course_enrollment.last_name %></td>
+        <td><%= course_enrollment.name %></td>
       <% end %>
     <tbody>
   </table>
 </div>
+
+<%= link_to 'Back to Courses', courses_path, class: "btn btn-primary btn-med" %><br /><br />
+<%= link_to 'New Course Enrollment', new_course_enrollment_path, class: "btn btn-primary btn-med" %>

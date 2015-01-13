@@ -26,11 +26,14 @@
 
 <%= f.label :course_ID %>
 <%= f.text_field :course_id %><br /><br />
-
-<div class="actions">
-  <%= f.submit "Submit", class:"btn btn-primary btn-md" %>
-</div><br />
-
+<% if current_page? new_course_enrollment_path %>
+  <div class="actions">
+    <%= f.submit "Submit", class:"btn btn-primary btn-md" %>
+  </div><br />
+<% else %>
+  <div class="actions">
+    <%= f.submit "Update", class:"btn btn-primary btn-md" %>
+  </div><br />
 <% end %>
-
+<% end %>
 <% end %>

@@ -23,11 +23,12 @@
 
   <%= f.label :section %>
   <%= f.text_field :section %><br /><br />
-
   <div class="actions">
+  <% if current_page? new_course_path %>
+    <%= f.submit "Submit", class:"btn btn-primary btn-md" %>
+  <% else %>
     <%= f.submit "Update", class:"btn btn-primary btn-md" %>
-  </div><br />
-
   <% end %>
-
+  </div>
+  <% end %>
 <% end %>
