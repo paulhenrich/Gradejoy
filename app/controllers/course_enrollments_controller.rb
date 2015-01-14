@@ -5,8 +5,6 @@ class CourseEnrollmentsController < ApplicationController
 
   def index
     @course_enrollments = CourseEnrollment.all
-    @student = Student.all
-    @course = Course.all
     respond_with(@course_enrollments)
   end
 

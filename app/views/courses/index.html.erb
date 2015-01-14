@@ -1,9 +1,11 @@
 <% if notice %>
-<p class="alert alert-success"><%= notice %></p>
+  <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
-<p class="alert alert-danger"><%= alert %></p>
-<% end %><%if user_signed_in? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<%if user_signed_in? %>
+  <% provide(:title, "Courses") %>
   <h2>Gradebook</h2>
   <div class="table-responsive">
     <table class="table table-bordered table-hover">
@@ -33,6 +35,7 @@
   <%= link_to "View Created Assignments", assignments_path, class: "btn btn-danger ", id: "createbutton" %> <br /><br />
 
 <% else %>
+<% provide(:title, "Home") %>
   <div class="jumbotron">
     <h2>Experience Gradejoy.</h2>
     <br />
