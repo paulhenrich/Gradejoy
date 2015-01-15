@@ -12,6 +12,7 @@ Gradejoy::Application.configure do
     authentication: "plain",
     user_name: "gradejoydonotreply@gmail.com",
     password: ENV['GMAIL_PASSWORD'],
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'none'
   }
 end
