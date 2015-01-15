@@ -17,7 +17,6 @@ class EnrollStudentController < ApplicationController
     else
       render :new
     end
-
   end
 
   private

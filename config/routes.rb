@@ -24,6 +24,10 @@ Gradejoy::Application.routes.draw do
 
   post "courses/:id/enroll_student/new(.:format)", to: "enroll_student#create"
 
+  get "/courses/:id/course_assignment/new(.:format)", to: "course_assignment#new"
+
+  post "courses/:id/course_assignment/new(.:format)", to: "course_assignment#create"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

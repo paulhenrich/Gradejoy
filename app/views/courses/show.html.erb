@@ -17,9 +17,9 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Grade Level</th>
-      <% @assignments.each do |assignment| %>
-      <th><%= assignment.title %></th>
-      <% end %>
+      <%#<% @course.assignments.each do |assignment| %>
+      <%#<th><%= assignment.title %></th>
+      <%#<% end %>
     </tr>
   </thead>
 
@@ -35,6 +35,6 @@
 </table>
 </div>
 
-<%= link_to "Create New Assignment", new_assignment_path, class: "btn btn-danger " %> <br /><br />
+<%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger " %> <br /><br />
 
 <%= link_to "Create and Enroll Student", new_enroll_student_route(@course.id), class: "btn btn-info " %> <br /><br />

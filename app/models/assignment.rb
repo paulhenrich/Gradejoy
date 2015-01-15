@@ -1,5 +1,5 @@
 class Assignment < ActiveRecord::Base
   validates :title, presence: true
-  belongs_to :course
+  has_many :courses, through: :course_assignments
   belongs_to :student
 end

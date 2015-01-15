@@ -12,7 +12,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @assignments = Assignment.all
     respond_with(@course)
   end
 
