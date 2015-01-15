@@ -14,6 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def new
+    @url = url_for(:controller => 'students', :action => 'create')
     @student = Student.new
     respond_with(@student)
   end

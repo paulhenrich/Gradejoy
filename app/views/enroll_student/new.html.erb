@@ -1,0 +1,6 @@
+<% provide(:title, "Create and Enroll Student") %>
+<h1>Create and Enroll Student in <%= @course.name %></h1>
+
+<%= render 'students/form' %><br />
+
+<%= link_to 'Back', courses_path, class: "btn btn-primary " %>

@@ -26,17 +26,11 @@
   </div>
   <%= link_to 'Create New Course', new_course_path, class: "btn btn-primary " %> <br /><br />
 
-  <%= link_to 'Create New Student', new_student_path, class: "btn btn-success " %> <br /><br />
+  <%= link_to 'My Students', students_path, class: "btn btn-success " %> <br /><br />
 
-  <%= link_to 'View Created Students', students_path, class: "btn btn-success " %> <br /><br />
+  <%= link_to "My Assignments", assignments_path, class: "btn btn-danger " %> <br /><br />
 
-  <%= link_to "Create New Assignment", new_assignment_path, class: "btn btn-danger " %> <br /><br />
-
-  <%= link_to "View Created Assignments", assignments_path, class: "btn btn-danger " %> <br /><br />
-
-  <%= link_to "Create Course Enrollment", new_course_enrollment_path, class: "btn btn-info" %><br /><br />
-
-  <%= link_to "View Course Enrollments", course_enrollments_path, class: "btn btn-info" %><br /><br />
+  <%= link_to "My Course Enrollments", course_enrollments_path, class: "btn btn-info" %><br /><br />
 <% else %>
 <% provide(:title, "Home") %>
   <div class="jumbotron">
