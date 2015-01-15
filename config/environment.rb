@@ -10,8 +10,8 @@ Gradejoy::Application.configure do
     port: 587,
     domain: "gmail.com",
     authentication: "plain",
-    user_name: "robertlandreaux@gmail.com",
-    password: ENV["GMAIL_PASSWORD"],
+    user_name: "gradejoydonotreply@gmail.com",
+    password: ENV['GMAIL_PASSWORD'],
     enable_starttls_auto: true
   }
 end
