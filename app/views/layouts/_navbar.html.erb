@@ -8,11 +8,11 @@
         <span class="icon-bar"></span>
       </button>
       <% if user_signed_in? %>
-      <%= link_to "Gradejoy", courses_path, class:"navbar-brand" %>
+      <%= link_to "Gradejoy", root_path, class:"navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Gradebook", courses_path %></li>
+        <li><%= link_to "Courses", courses_path %></li>
         <li><%= link_to "Communication", communication_path %></li>
         <li><%= link_to "Account", account_path %></li>
       </ul>

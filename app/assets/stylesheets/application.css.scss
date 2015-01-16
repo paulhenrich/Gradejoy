@@ -14,11 +14,14 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- html,body {
+ html, {
    height: 100%;
-   body {
-     padding-top: 5em;
-   }
+ }
+
+ body {
+   padding-top: 5em;
+   height: 100%;
+   /*background-color: #EBFFEB;*/
  }
 
  img {
@@ -27,6 +30,10 @@
    margin: 1.1em 1em 1em 1em;
 
  }
+
+ /*.navbar {
+   background-color: #E6E6FF
+ }*/
 
  .navbar-brand {
    font-size: 160%;

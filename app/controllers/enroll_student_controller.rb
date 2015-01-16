@@ -1,16 +1,17 @@
 class EnrollStudentController < ApplicationController
   before_action :set_course, only: [:create, :new]
   before_filter :authenticate_user!
+  before_action :authorized_user
 
   def new
     @url = url_for(:controller => 'enroll_student', :action => 'create')
-    @student = Student.new
+    @student = current_user.students.new
   end
 
   def create
-    @student = Student.new student_params
+    @student = current_user.students.new student_params
     if @student.save
-      @enrollment = CourseEnrollment.new :student_id => @student.id, :course_id => @course.id
+      @enrollment = current_user.course_enrollments.new :student_id => @student.id, :course_id => @course.id
       if @enrollment.save
         redirect_to @course
       end
@@ -27,5 +28,11 @@ class EnrollStudentController < ApplicationController
 
   def student_params
     params.require(:student).permit(:first_name, :last_name, :grade_level, :birth_month, :birth_day, :birth_year)
+  end
+
+  def authorized_user
+    @course = current_user.courses.find_by(id: params[:id])
+    @student = current_user.students.find_by(id: params[:id])
+    redirect_to courses_path, notice: "Not authorized to modify that course or student" if @course.nil?
   end
 end
