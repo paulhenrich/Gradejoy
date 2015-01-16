@@ -1,13 +1,11 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
-  before_action :authorized_user, only: [:show, :edit, :update, :destroy]
+  before_action :authorized_user, except: [:index, :new, :create, :destroy]
   respond_to :html
 
   def index
-    if user_signed_in?
-      @courses = current_user.courses
-    end
+    @courses = current_user.courses
     respond_with(@courses)
   end
 

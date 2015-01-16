@@ -1,10 +1,11 @@
 class AssignmentsController < ApplicationController
   before_action :set_assignment, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  before_action :authorized_user, except: [:index, :new, :create, :destroy]
   respond_to :html
 
   def index
-    @assignments = Assignment.all
+    @assignments = current_user.assignments
     respond_with(@assignments)
   end
 
@@ -13,7 +14,8 @@ class AssignmentsController < ApplicationController
   end
 
   def new
-    @assignment = Assignment.new
+    @url = url_for(:controller => 'assignments', :action => 'create')
+    @assignment = current_user.assignments.new
     respond_with(@assignment)
   end
 
@@ -21,7 +23,7 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @assignment = Assignment.new(assignment_params)
+    @assignment = current_user.assignment.new(assignment_params)
 
     if @assignment.save
       redirect_to @assignment
@@ -47,5 +49,10 @@ class AssignmentsController < ApplicationController
 
     def assignment_params
       params.require(:assignment).permit(:title, :date_created, :date_due, :category, :total_points)
+    end
+
+    def authorized_user
+      @assignment = current_user.assignments.find_by(id: params[:id])
+      redirect_to courses_path, notice: "Not authorized to view that assignment" if @assignment.nil?
     end
 end

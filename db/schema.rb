@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116031713) do
+ActiveRecord::Schema.define(version: 20150116182406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150116031713) do
     t.decimal  "points_earned"
     t.decimal  "total_points"
     t.integer  "course_id"
+    t.integer  "user_id"
   end
 
   add_index "assignments", ["category"], name: "index_assignments_on_category", using: :btree
@@ -50,24 +51,29 @@ ActiveRecord::Schema.define(version: 20150116031713) do
   add_index "assignments", ["points_earned"], name: "index_assignments_on_points_earned", using: :btree
   add_index "assignments", ["title"], name: "index_assignments_on_title", using: :btree
   add_index "assignments", ["total_points"], name: "index_assignments_on_total_points", using: :btree
+  add_index "assignments", ["user_id"], name: "index_assignments_on_user_id", using: :btree
 
   create_table "course_assignments", force: true do |t|
     t.integer "course_id"
     t.integer "assignment_id"
+    t.integer "user_id"
   end
 
   add_index "course_assignments", ["assignment_id"], name: "index_course_assignments_on_assignment_id", using: :btree
   add_index "course_assignments", ["course_id"], name: "index_course_assignments_on_course_id", using: :btree
+  add_index "course_assignments", ["user_id"], name: "index_course_assignments_on_user_id", using: :btree
 
   create_table "course_enrollments", force: true do |t|
     t.integer  "course_id"
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "course_enrollments", ["course_id"], name: "index_course_enrollments_on_course_id", using: :btree
   add_index "course_enrollments", ["student_id"], name: "index_course_enrollments_on_student_id", using: :btree
+  add_index "course_enrollments", ["user_id"], name: "index_course_enrollments_on_user_id", using: :btree
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -90,6 +96,7 @@ ActiveRecord::Schema.define(version: 20150116031713) do
     t.integer  "birth_month"
     t.integer  "birth_day"
     t.integer  "birth_year"
+    t.integer  "user_id"
   end
 
   add_index "students", ["birth_day"], name: "index_students_on_birth_day", using: :btree
@@ -98,6 +105,7 @@ ActiveRecord::Schema.define(version: 20150116031713) do
   add_index "students", ["first_name"], name: "index_students_on_first_name", using: :btree
   add_index "students", ["grade_level"], name: "index_students_on_grade_level", using: :btree
   add_index "students", ["last_name"], name: "index_students_on_last_name", using: :btree
+  add_index "students", ["user_id"], name: "index_students_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

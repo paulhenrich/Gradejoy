@@ -18,7 +18,7 @@ Gradejoy::Application.routes.draw do
   get "account" => "pages#account"
   get "communication" => "pages#communication"
 
-  root "courses#index"
+  root "pages#index"
 
   get "courses/:id/enroll_student/new(.:format)", to: "enroll_student#new"
 

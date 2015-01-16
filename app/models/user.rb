@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
  end
 
   has_many :courses
+  has_many :assignments
+  has_many :students
+  has_many :course_assignments
+  has_many :course_enrollments
 end
