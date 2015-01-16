@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115223251) do
+ActiveRecord::Schema.define(version: 20150116031713) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,13 +53,11 @@ ActiveRecord::Schema.define(version: 20150115223251) do
 
   create_table "course_assignments", force: true do |t|
     t.integer "course_id"
-    t.integer "student_id"
     t.integer "assignment_id"
   end
 
   add_index "course_assignments", ["assignment_id"], name: "index_course_assignments_on_assignment_id", using: :btree
   add_index "course_assignments", ["course_id"], name: "index_course_assignments_on_course_id", using: :btree
-  add_index "course_assignments", ["student_id"], name: "index_course_assignments_on_student_id", using: :btree
 
   create_table "course_enrollments", force: true do |t|
     t.integer  "course_id"

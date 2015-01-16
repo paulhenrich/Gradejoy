@@ -5,7 +5,7 @@ class TestTest < ActionMailer::TestCase
     mail = Test.test1
     assert_equal "Test1", mail.subject
     assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
+    assert_equal ["gradejoydonotreply@gmail.com"], mail.from
     assert_match "Hi", mail.body.encoded
   end
 

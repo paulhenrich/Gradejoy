@@ -24,7 +24,7 @@ Gradejoy::Application.routes.draw do
 
   post "courses/:id/enroll_student/new(.:format)", to: "enroll_student#create"
 
-  get "/courses/:id/course_assignment/new(.:format)", to: "course_assignment#new"
+  get "courses/:id/course_assignment/new(.:format)", to: "course_assignment#new"
 
   post "courses/:id/course_assignment/new(.:format)", to: "course_assignment#create"
 
