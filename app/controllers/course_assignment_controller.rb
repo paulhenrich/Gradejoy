@@ -1,6 +1,6 @@
 class CourseAssignmentController < ApplicationController
   before_action :set_course, only: [:create, :new]
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!
 
   def new
     @url = url_for(:controller => 'course_assignment', :action => 'create')
