@@ -1,17 +1,18 @@
 class GradesController < ApplicationController
   before_action :set_course, only: [:new, :create, :update, :destroy]
   before_action :set_student, only: [:new, :create, :update, :destroy]
+  before_action :set_assignment, only: [:new, :create, :update, :destroy]
   before_filter :authenticate_user!
   before_action :authorized_user, except: [:index, :new, :create]
 
   def new
     @url = url_for(:controller => 'grades', :action => 'create')
     @grade = current_user.grades.new
-    respond_with(@course)
+    #respond_with(@course)
   end
 
   def create
-    @grade = current_user.grades.new(:points_earned => grade_params[:points_earned], :student_id => @student.id, :course_id => @course.id)
+    @grade = current_user.grades.new(:points_earned => grade_params[:points_earned], :student_id => @student.id, :assignment_id => @assignment.id)
 
     if @grade.save
       redirect_to @course
@@ -29,7 +30,7 @@ class GradesController < ApplicationController
   private
 
   def set_course
-    @course = Course.find(params[:course_id])
+    @course = Course.find(params[:id])
   end
 
   def set_student
@@ -37,6 +38,8 @@ class GradesController < ApplicationController
   end
 
   def set_assignment
+    @assignment = Assignment.find(params[:assignment_id])
+  end
 
   def grade_params
     params.require(:grade).permit(:points_earned)

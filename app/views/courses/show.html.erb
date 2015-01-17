@@ -51,10 +51,9 @@
         <td><%= student.last_name %></td>
         <td><%= student.grade_level %></td>
         <td>Average<td>
-    <%#<% if @grade %>
         <% @course.assignments.each do |assignment| %>
         <td><%= link_to 'Add Grade', new_grade_route(@course.id, student.id, assignment.id) %></td>
-    <% end %>
+        <% end %>
     <% end %>
       </tr>
 </tbody>
