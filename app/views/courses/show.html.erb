@@ -37,6 +37,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Grade Level</th>
+      <th>Average</th>
       <% @course.assignments.each do |assignment| %>
       <th><%= assignment.title %></th>
       <% end %>
@@ -49,11 +50,13 @@
         <td><%= link_to student.first_name, student %></td>
         <td><%= student.last_name %></td>
         <td><%= student.grade_level %></td>
-        <%#<% @student.assignments do |assignment| %>
-        <%#<td><%= assignment.points_earned %>
-        <%#<% end %>
-      </tr>
+        <td>Average<td>
+    <%#<% if @grade %>
+        <% @course.assignments.each do |assignment| %>
+        <td><%= link_to 'Add Grade', new_grade_route(@course.id, student.id, assignment.id) %></td>
     <% end %>
+    <% end %>
+      </tr>
 </tbody>
 </table>
 </div>

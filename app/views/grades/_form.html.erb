@@ -1,0 +1,21 @@
+<%= form_for(@grade, :url => @url) do |f| %>
+<% if @grade.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@grade.errors.count, "error") %> prohibited this grade from being saved:</h2>
+
+  <ul>
+    <% @grade.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<%= form_for(@grade,:url => @url) do |f| %>
+<%= f.label :points_earned %> (required)
+<%= f.text_field :points_earned %>
+<div class="actions">
+  <%= f.submit "Submit", class:"btn btn-primary " %>
+</div>
+<% end %>
+<% end %>
