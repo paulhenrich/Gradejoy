@@ -8,7 +8,6 @@ class GradesController < ApplicationController
   def new
     @url = url_for(:controller => 'grades', :action => 'create')
     @grade = current_user.grades.new
-    #respond_with(@course)
   end
 
   def create

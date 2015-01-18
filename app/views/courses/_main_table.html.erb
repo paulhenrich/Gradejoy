@@ -1,0 +1,29 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Grade Level</th>
+        <th>Average</th>
+        <% @course.assignments.each do |assignment| %>
+        <th><%= assignment.title %></th>
+        <% end %>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @course.students.each do |student| %>
+      <tr>
+        <td><%= link_to student.first_name, student %></td>
+        <td><%= student.last_name %></td>
+        <td><%= student.grade_level %></td>
+        <td>Average</td>
+        <% @course.assignments.each do |assignment| %>
+          <td><%= link_to 'Add Grade (not completely functional yet)', new_grade_route(@course.id, student.id, assignment.id) %></td>
+        <% end %>
+        <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>

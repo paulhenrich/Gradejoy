@@ -1,6 +1,6 @@
 <% provide(:title, "New Grade") %>
-<h2>Create New Grade for @ in @</h2>
+<h2>Create New Grade for <%= @student.first_name + ' ' + @student.last_name %>'s Assignment<% @assignment.title %> <% @course.name %> </h2>
 
 <%= render 'form' %>
 <br />
-<%= link_to 'Back', courses_path, class: "btn btn-primary " %>
+<%= link_to 'Back', course_path, class: "btn btn-primary " %>
