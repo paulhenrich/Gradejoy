@@ -20,7 +20,12 @@ class GradesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
+    @grade.update(course_params)
+    respond_with(@grade)
   end
 
   def destroy
