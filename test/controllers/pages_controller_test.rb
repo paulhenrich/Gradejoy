@@ -49,4 +49,10 @@ class PagesControllerTest < ActionController::TestCase
     assert_select "title", "#{@base_title} | Communication"
   end
 
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_select "title", "#{@base_title} | Home"
+  end
+
 end

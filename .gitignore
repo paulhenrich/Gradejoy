@@ -18,6 +18,4 @@
 # Ignore application configuration
 /config/application.yml
 
-/app/assets/javascripts/segmentio.js
-/config/initializers/devise.rb
 config.ru
