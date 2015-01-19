@@ -1,3 +1,5 @@
+#Gradejoy
+
 [![Build Status](https://travis-ci.org/robertlandreaux/Gradejoy.png)](https://travis-ci.org/robertlandreaux/Gradejoy)
 
 Gradejoy is an online gradebook application for students and teachers.
