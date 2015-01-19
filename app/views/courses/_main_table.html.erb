@@ -7,7 +7,7 @@
         <th>Grade Level</th>
         <th>Average</th>
         <% @course.assignments.each do |assignment| %>
-        <th><%= assignment.title %></th>
+        <th><%= link_to assignment.title, assignment %></th>
         <% end %>
       </tr>
     </thead>
