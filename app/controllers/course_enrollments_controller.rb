@@ -25,7 +25,7 @@ class CourseEnrollmentsController < ApplicationController
     @course_enrollment = current_user.course_enrollments.new(course_enrollment_params)
 
     if @course_enrollment.save
-      redirect_to @course_enrollment
+      redirect_to courses_path
     else
       render :new
     end
