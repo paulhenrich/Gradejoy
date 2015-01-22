@@ -18,5 +18,5 @@ Rename config/application.yml.example to config/application.yml. That file will 
 The application will not send mail in development mode. Run `rake db:setup` in your command line. Run `rails s` in your command line. The application should run at localhost:3000
 in your browser.
 
-Email any questions, comments, or criticisms to robertlandreaux@gmail.com.
+Comment on the Github page or email any questions, comments, or criticisms to robertlandreaux@gmail.com.
 Feel free to contribute to this project! The Github Issues (scroll to top and look right) contains tasks that need work.
