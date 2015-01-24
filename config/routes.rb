@@ -32,6 +32,10 @@ Gradejoy::Application.routes.draw do
 
   post "courses/:id/grades/:assignment_id/:student_id/new(.:format)", to: "grades#create"
 
+  get "courses/:id/grades/:assignment_id/:student_id/edit(.:format)", to: "grades#edit"
+
+  patch "courses/:id/grades/:assignment_id/:student_id/update(.:format)", to: "grades#update"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

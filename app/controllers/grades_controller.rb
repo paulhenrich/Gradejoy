@@ -21,11 +21,15 @@ class GradesController < ApplicationController
   end
 
   def edit
+    @grade = Grade.get_grade(params[:student_id],params[:assignment_id])
+    #@url = "courses/#{params[:courses_id]}/grades/#{params[:assignment_id]}/#{params[:student_id]}"
+    @url = 'update'
   end
 
   def update
-    @grade.update(course_params)
-    respond_with(@grade)
+    @grade = Grade.get_grade(params[:student_id],params[:assignment_id])
+    @grade.update(grade_params)
+    redirect_to course_path(params[:id])
   end
 
   def destroy
