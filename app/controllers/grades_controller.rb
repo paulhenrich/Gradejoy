@@ -22,8 +22,7 @@ class GradesController < ApplicationController
 
   def edit
     @grade = Grade.get_grade(params[:student_id],params[:assignment_id])
-    #@url = "courses/#{params[:courses_id]}/grades/#{params[:assignment_id]}/#{params[:student_id]}"
-    @url = 'update'
+    @url = url_for(:controller => 'grades', :action => 'update')
   end
 
   def update
