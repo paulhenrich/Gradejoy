@@ -4,14 +4,9 @@ class CoursesController < ApplicationController
   before_action :authorized_user, except: [:index, :new, :create]
   respond_to :html
 
-  # If/when ready to add breadcrumbs to Gradejoy, I plan to use breadcrumbs_on_rails gem
-  add_breadcrumb "My Courses", :courses_path
-
   def index
     @courses = current_user.courses
     respond_with(@courses)
-    #breadcrumbs_on_rails code below
-    add_breadcrumb "My Courses", courses_path
   end
 
   def show
