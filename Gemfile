@@ -38,7 +38,7 @@ gem 'devise', '~> 3.0'
 gem 'figaro', '~> 1.0.0'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-digitalocean', '~> 0.1.0'
-gem 'breadcrumbs_on_rails', '~> 2.3.0'
+#gem 'breadcrumbs_on_rails', '~> 2.3.0'
 gem 'rake', '~> 10.4.2'
 gem 'lograge', '~> 0.3.1'
 

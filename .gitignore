@@ -19,3 +19,4 @@
 /config/application.yml
 
 config.ru
+/config/initializers/devise.rb
