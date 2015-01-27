@@ -40,7 +40,7 @@ gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-digitalocean', '~> 0.1.0'
 gem 'breadcrumbs_on_rails', '~> 2.3.0'
 gem 'rake', '~> 10.4.2'
-gem 'rack-cache', '~> 1.2'
+gem 'lograge', '~> 0.3.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

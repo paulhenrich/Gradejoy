@@ -12,7 +12,6 @@ class CourseEnrollmentsController < ApplicationController
   def new
     @course_enrollment = current_user.course_enrollments.new
     respond_with(@course_enrollment)
-    #@course_id = params[:id]
   end
 
   def edit

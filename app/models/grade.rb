@@ -1,4 +1,6 @@
 class Grade < ActiveRecord::Base
+
+  validates :points_earned, presence: true
   belongs_to :student
   belongs_to :assignment
   belongs_to :user
