@@ -5,3 +5,5 @@ SECRET_TOKEN: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 DEVISE_SECRET_KEY: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 GMAIL_PASSWORD: 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
 SEGMENT_IO_WRITE_KEY: 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
+DO_CLIENT_ID: 'xxxxxxxxxxxxxxxxxxxxxxxxxx'
+DO_SECRET_SECRET: 'xxxxxxxxxxxxxxxxxxxxxxxxxx'

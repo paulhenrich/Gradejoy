@@ -4,9 +4,9 @@
 
 Gradejoy is an online gradebook application for students and teachers.
 
-Rails version 4.2.0.
+Rails version 4.0.2.
 
-Ruby version 2.2.0.
+Ruby version 2.1.3.
 
 Visit http://gradejoy.com.
 
