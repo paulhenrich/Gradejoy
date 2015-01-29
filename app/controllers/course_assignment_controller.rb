@@ -18,6 +18,9 @@ class CourseAssignmentController < ApplicationController
     else
       render :new
     end
+
+    respond_to do |format|
+      if @course
   end
 
   private
