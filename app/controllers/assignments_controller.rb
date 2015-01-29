@@ -14,7 +14,6 @@ class AssignmentsController < ApplicationController
   end
 
   def new
-    @url = url_for(:controller => 'assignments', :action => 'create')
     @assignment = current_user.assignments.new
     respond_with(@assignment)
   end

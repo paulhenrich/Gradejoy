@@ -9,10 +9,14 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap-datetimepicker
+ *= require font-awesome
  *= require_tree .
  */
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "font-awesome";
 
  html, {
    height: 100%;
@@ -77,4 +81,10 @@
 textarea {
   height: 20em;
   width: 70%;
+}
+
+.form-control-inline {
+    min-width: 20em;
+    width: auto;
+    display: inline;
 }
