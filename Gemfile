@@ -44,6 +44,7 @@ gem 'lograge',                 '~> 0.3.1'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'momentjs-rails',          '~> 2.9.0'
 gem 'font-awesome-rails',      '~> 4.3.0.0'
+gem 'simple_form',             '~> 3.1.0'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '~>0.4.1', require: false

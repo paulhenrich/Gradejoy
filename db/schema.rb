@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150129044101) do
+ActiveRecord::Schema.define(version: 20150129041742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20150129044101) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
-    t.string   "date_created"
-    t.string   "date_due"
+    t.date     "date_created"
+    t.date     "date_due"
     t.string   "category"
     t.decimal  "points_earned"
     t.decimal  "total_points"
@@ -106,8 +106,8 @@ ActiveRecord::Schema.define(version: 20150129044101) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "grade_level"
-    t.date     "birthdate"
     t.integer  "user_id"
+    t.date     "birthdate"
   end
 
   add_index "students", ["birthdate"], name: "index_students_on_birthdate", using: :btree

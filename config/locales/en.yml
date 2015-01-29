@@ -21,7 +21,7 @@
 
 en:
   datepicker:
-      dformat: '%d/%m/%Y'        # display format of the date (this is the default, can be ommited)
+      dformat: '%Y/%m/%d'        # display format of the date (this is the default, can be ommited)
       pformat: 'YYYY/MM/DD'      # picking format of the date (this is the default, can be ommited)
       weekstart: 0               # the week starts on Sunday (this is the default, can be ommited)
   timepicker:
