@@ -16,10 +16,10 @@
   <%= f.text_field :title, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :date_created %>
-  <%= f.text_field :date_created, class: 'datepicker form-control form-control-inline' %><br /><br />
+  <%= f.text_field :date_created, as: :date, class: 'datepicker form-control form-control-inline' %><br /><br />
 
   <%= f.label :date_due %>
-  <%= f.text_field :date_due, class: 'datepicker form-control form-control-inline' %><br /><br />
+  <%= f.text_field :date_due, as: :date, class: 'datepicker form-control form-control-inline' %><br /><br />
 
   <%= f.label :category %>
   <%= f.text_field :category, class: 'form-control form-control-inline' %><br /><br />
