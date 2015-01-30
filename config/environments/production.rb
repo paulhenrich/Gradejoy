@@ -79,5 +79,9 @@ Gradejoy::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'http://gradejoy.com' }
-  #config.lograge.enabled = true
+  config.lograge.enabled = true
+  config.middleware.use Rack::Cache,
+       :verbose => true,
+       :metastore   => 'file:/var/cache/rack/meta',
+       :entitystore => 'file:/var/cache/rack/body'
 end

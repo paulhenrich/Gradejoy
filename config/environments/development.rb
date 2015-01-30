@@ -27,4 +27,8 @@ Gradejoy::Application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.middleware.use Rack::Cache,
+       :verbose => true,
+       :metastore   => 'file:/var/cache/rack/meta',
+       :entitystore => 'file:/var/cache/rack/body'
 end
