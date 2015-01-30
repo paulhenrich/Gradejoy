@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/robertlandreaux/Gradejoy.png)](https://travis-ci.org/robertlandreaux/Gradejoy)
 
-Gradejoy is an online gradebook application for students and teachers.
+Gradejoy is an online gradebook application for students and teachers. Currently it is only functional for teachers.
 
 Rails version 4.0.2.
 
