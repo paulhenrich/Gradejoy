@@ -11,7 +11,12 @@
 
 <%= render 'main_table' %>
 
-<%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger" %> &nbsp  &nbsp
+<div id="assignments" style="display:none"><%= render 'main_table_ajax' %></div>
+
+<div id="assignment_form" style="display:none"></div>
+
+<br />
+<%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger", remote: true %> &nbsp  &nbsp
 
 <%= link_to "Create and Enroll New Student", new_enroll_student_route(@course.id), class: "btn btn-info" %> &nbsp  &nbsp
 

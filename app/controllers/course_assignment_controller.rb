@@ -2,6 +2,7 @@ class CourseAssignmentController < ApplicationController
   before_action :set_course, only: [:create, :new]
   before_filter :authenticate_user!
   before_action :authorized_user
+  respond_to :html, :js
 
   def new
     @url = url_for(:controller => 'course_assignment', :action => 'create')
@@ -10,14 +11,14 @@ class CourseAssignmentController < ApplicationController
 
   def create
     @assignment = current_user.assignments.new assignment_params
-    if @assignment.save
-      @course_assignment = current_user.course_assignments.new :assignment_id => @assignment.id, :course_id => @course.id
-      if @course_assignment.save
-        redirect_to @course
-      end
-    else
-      render :new
-    end
+     if @assignment.save
+       @course_assignment = current_user.course_assignments.new :assignment_id => @assignment.id, :course_id => @course.id
+       if @course_assignment.save
+         respond_with @course
+       end
+       else
+        render :new
+     end
   end
 
   private
