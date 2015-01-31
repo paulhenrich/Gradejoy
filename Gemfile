@@ -47,6 +47,8 @@ gem 'font-awesome-sass',        '~> 4.2.2'
 gem 'simple_form',              '~> 3.1.0'
 gem 'jquery-turbolinks',        '~> 0.2.1'
 gem 'rack-cache',               '~> 1.2'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', '~>0.4.1', require: false

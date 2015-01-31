@@ -2,6 +2,7 @@ class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
   before_action :authorized_user, except: [:index, :new, :create]
+  respond_to :html, :js
 
   respond_to :html
 

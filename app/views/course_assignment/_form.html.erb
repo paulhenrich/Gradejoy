@@ -1,4 +1,4 @@
-<%= form_for @assignment, :url => @url, remote: true do |f| %>
+<%= form_for @assignment, :url => @url do |f| %>
   <% if @assignment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
@@ -21,7 +21,7 @@
 
   <%= f.label :date_due %>
   <%= f.text_field :date_due, class: 'datepicker form-control form-control-inline' %><br /><br />
-
+  
   <%= f.label :category %>
   <%= f.text_field :category, class: 'form-control form-control-inline' %><br /><br />
 
