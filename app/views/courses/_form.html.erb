@@ -25,11 +25,7 @@
   <%= f.label :section %>
   <%= f.text_field :section, class: 'form-control form-control-inline' %><br /><br />
   <div class="actions">
-  <% if current_page? new_course_path %>
-    <%= f.submit "Submit", class:"btn btn-primary " %>
-  <% else %>
-    <%= f.submit "Update", class:"btn btn-primary " %>
-  <% end %>
+    <%= f.submit "Submit", class:"btn btn-primary" %>
   </div>
   <% end %>
 <% end %>
