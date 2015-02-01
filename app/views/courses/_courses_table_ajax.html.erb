@@ -1,0 +1,29 @@
+<div class="table-responsive" id="courses-table">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Course ID</th>
+        <th>Time</th>
+        <th>Period</th>
+        <th>Section</th>
+        <th>Created</th>
+        <th>Number of Students</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @courses.each do |course| %>
+      <tr>
+        <td><%= link_to course.name, course %></td>
+        <td><%= course.id %></td>
+        <td><%= course.time %></td>
+        <td><%= course.period %></td>
+        <td><%= course.section %></td>
+        <td><%= course.created_at %></td>
+        <td><%= course.students.all.count %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
