@@ -23,9 +23,9 @@ class CoursesController < ApplicationController
 
   def create
     @course = current_user.courses.new(course_params)
-
+    @courses = current_user.courses
     if @course.save
-       redirect_to @course
+       respond_with @courses
     else
       render :new
     end

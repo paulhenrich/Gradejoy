@@ -38,9 +38,10 @@
     </tbody>
   </table>
 </div>
-<%= link_to 'Create New Course', new_course_path, class: "btn btn-primary" %> <br /><br />
 
 <div id="courses" style="display:none;"></div>
+
+<%= link_to 'Create New Course', new_course_path, class: "btn btn-primary", remote: true %> <br /><br />
 
 <div id="course_form" style="display:none;"></div>
 
