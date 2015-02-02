@@ -14,7 +14,7 @@ class EnrollStudentController < ApplicationController
     if @student.save
       @enrollment = current_user.course_enrollments.new :student_id => @student.id, :course_id => @course.id
       if @enrollment.save
-        redirect_to @course
+        respond_with @course
       end
     else
       render :new
