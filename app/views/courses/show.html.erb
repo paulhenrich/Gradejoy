@@ -1,4 +1,6 @@
 <% provide(:title, "Course") %>
+<%= link_to 'Back to Courses List', courses_path, class: "btn btn-primary" %>
+
 <h2><%= @course.name %></h2>
 
 <%= render 'current_course_table' %>
@@ -16,10 +18,6 @@
 <div id="assignment_form" style="display:none;"></div>
 
 <br />
-<%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger", remote: true %> &nbsp  &nbsp
+<%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger", remote: true %> <br /><br />
 
-<%= link_to "Create and Enroll New Student", new_enroll_student_route(@course.id), class: "btn btn-info" %> &nbsp  &nbsp
-
-<%= link_to "Enroll Existing Student", new_course_enrollment_path, class: "btn btn-success" %> &nbsp  &nbsp
-
-<%= link_to 'Back to Courses List', courses_path, class: "btn btn-primary" %>&nbsp  &nbsp
+<%= link_to "Create and Enroll New Student", new_enroll_student_route(@course.id), class: "btn btn-info" %> <br /><br />
