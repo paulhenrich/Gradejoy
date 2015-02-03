@@ -1,7 +1,9 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
+  before_action :set_student, only: [:new, :create, :update, :destroy]
+  before_action :set_assignment, only: [:new, :create, :update, :destroy]
   before_action :authorized_user, except: [:index, :new, :create]
+  before_filter :authenticate_user!
   respond_to :html, :js
 
   def index
@@ -45,6 +47,14 @@ class CoursesController < ApplicationController
 
     def set_course
       @course = Course.find(params[:id])
+    end
+
+    def set_student
+      @student = Student.find(params[:student_id])
+    end
+
+    def set_assignment
+      @assignment = Assignment.find(params[:assignment_id])
     end
 
     def course_params

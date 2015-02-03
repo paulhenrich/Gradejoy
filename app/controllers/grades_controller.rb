@@ -2,8 +2,8 @@ class GradesController < ApplicationController
   before_action :set_course, only: [:new, :create, :update, :destroy]
   before_action :set_student, only: [:new, :create, :update, :destroy]
   before_action :set_assignment, only: [:new, :create, :update, :destroy]
-  before_filter :authenticate_user!
   before_action :authorized_user, except: [:index, :new, :create]
+  before_filter :authenticate_user!
   respond_to :html, :js
 
   def new
@@ -15,7 +15,7 @@ class GradesController < ApplicationController
     @grade = current_user.grades.new(:points_earned => grade_params[:points_earned], :student_id => @student.id, :assignment_id => @assignment.id)
 
     if @grade.save
-      redirect_to @course
+      respond_with @course
     else
       render :new
     end
