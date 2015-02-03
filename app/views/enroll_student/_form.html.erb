@@ -12,7 +12,11 @@
   <% end %>
 
   <%= form_for @student, :url => @url, remote: true do |f| %>
-  <h3>Create and Enroll Student in <%= @course.name %></h3>
+  <% if current_page? new_enroll_student_route(@course.id) %>
+    <h3>Add New Student</h3>
+  <% else %>
+    <h3>Edit Student Information</h3>
+  <% end %>
   <%= f.label :first_name %> (required)
   <%= f.text_field :first_name, class: 'form-control form-control-inline' %><br /><br />
 
