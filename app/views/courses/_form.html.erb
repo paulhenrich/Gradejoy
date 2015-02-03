@@ -12,6 +12,7 @@
   <% end %>
 
   <%= form_for @course, remote: true do |f| %>
+  <h3>Create New Course</h3>
   <%= f.label :name %>(required)
   <%= f.text_field :name, class: 'form-control form-control-inline' %><br /><br />
 

@@ -4,17 +4,7 @@
     display: inline;
 }
 
-#assignment_form {
-  text-align: center;
-  display:none;
-}
-
-#enroll_form {
-  text-align: center;
-  display:none;
-}
-
-#course_form {
+#assignment_form, #grade_form, #enroll_form, #course_form {
   text-align: center;
   display:none;
 }

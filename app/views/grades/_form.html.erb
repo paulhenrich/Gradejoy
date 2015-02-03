@@ -1,4 +1,4 @@
-<%= form_for(@grade, :url => @url) do |f| %>
+<%= form_for @grade, :url => @url, remote: true do |f| %>
 <% if @grade.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@grade.errors.count, "error") %> prohibited this grade from being saved:</h2>
@@ -11,9 +11,11 @@
 </div>
 <% end %>
 
-<%= form_for(@grade,:url => @url) do |f| %>
+<%= form_for @grade,:url => @url, remote: true do |f| %>
+<h3>Create New Grade for <%= @student.first_name + ' ' + @student.last_name %>'s <%= @assignment.title %> </h3>
 <%= f.label :points_earned %> (required)
 <%= f.text_field :points_earned, class: 'form-control form-control-inline' %>
+<br /><br />
 <div class="actions">
   <%= f.submit "Submit", class:"btn btn-primary" %>
 </div>
