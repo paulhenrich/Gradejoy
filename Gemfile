@@ -40,14 +40,23 @@ gem 'omniauth',                '~> 1.2.2'
 gem 'omniauth-digitalocean',   '~> 0.1.0'
 #gem 'breadcrumbs_on_rails',   '~> 2.3.0'
 gem 'rake',                    '~> 10.4.2'
-gem 'lograge',                 '~> 0.3.1'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'momentjs-rails',           '~> 2.9.0'
 gem 'font-awesome-sass',        '~> 4.2.2'
 gem 'simple_form',              '~> 3.1.0'
 gem 'jquery-turbolinks',        '~> 0.2.1'
-gem 'rack-cache',               '~> 1.2'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.0.0'
+
+group :development, :test do
+  gem 'rspec',                    '~> 3.1.0'
+  gem 'rspec-rails',              '~> 3.1.0'
+  gem 'capybara',                 '~> 2.4.4'
+end
+
+group :production do
+  gem 'lograge',                 '~> 0.3.1'
+  gem 'rack-cache',               '~> 1.2'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
