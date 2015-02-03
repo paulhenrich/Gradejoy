@@ -1,7 +1,5 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-  before_action :set_student, only: [:new, :create, :update, :destroy]
-  before_action :set_assignment, only: [:new, :create, :update, :destroy]
   before_action :authorized_user, except: [:index, :new, :create]
   before_filter :authenticate_user!
   respond_to :html, :js
@@ -12,6 +10,8 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @assignments = current_user.assignments
+    @students = current_user.students
     respond_with(@course)
   end
 
