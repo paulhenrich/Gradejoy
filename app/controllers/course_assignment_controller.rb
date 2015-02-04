@@ -9,6 +9,12 @@ class CourseAssignmentController < ApplicationController
     @assignment = current_user.assignments.new
   end
 
+  def show
+    @assignment = current_user.assignments
+    @course_assignment = current_user.course_assignments
+    respond with(@course_assignment)
+  end
+
   def create
     @assignment = current_user.assignments.new assignment_params
      if @assignment.save

@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div class="table-responsive" id="main-table">
   <table class="table table-bordered table-hover">
     <thead>
       <tr>
@@ -7,7 +7,7 @@
         <th>Grade Level</th>
         <th>Average</th>
         <% @course.assignments.each do |assignment| %>
-          <th><%= link_to assignment.title, assignment %></th>
+          <th><%= link_to assignment.title, assignment, remote: true %></th>
         <% end %>
       </tr>
     </thead>
@@ -24,7 +24,7 @@
           <% if grade %>
             <td><%= link_to grade.points_earned, edit_grade_route(@course.id, student.id, assignment.id) %></td>
           <% else %>
-            <td><%= link_to 'Add Grade', new_grade_route(@course.id, student.id, assignment.id) %></td>
+            <td><%= link_to 'Add Grade', new_grade_route(@course.id, student.id, assignment.id), remote: true %></td>
           <% end %>
         <% end %>
         <% end %>

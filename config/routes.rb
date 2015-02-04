@@ -28,6 +28,8 @@ Gradejoy::Application.routes.draw do
 
   post "courses/:id/course_assignment/new(.:format)", to: "course_assignment#create"
 
+  get "courses/:id/course_assignment/show(.:format)", to: "course_assignment#show"
+
   get "courses/:id/grades/:assignment_id/:student_id/new(.:format)", to: "grades#new"
 
   post "courses/:id/grades/:assignment_id/:student_id/new(.:format)", to: "grades#create"

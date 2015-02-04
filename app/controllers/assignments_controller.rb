@@ -23,9 +23,10 @@ class AssignmentsController < ApplicationController
 
   def create
     @assignment = current_user.assignment.new(assignment_params)
+    @course = current_user.courses
 
     if @assignment.save
-      redirect_to @assignment
+      respond_with @course
     else
       render :new
     end
@@ -33,7 +34,7 @@ class AssignmentsController < ApplicationController
 
   def update
     @assignment.update(assignment_params)
-    respond_with(@assignment)
+    redirect_to @assignment
   end
 
   def destroy
@@ -44,6 +45,10 @@ class AssignmentsController < ApplicationController
   private
     def set_assignment
       @assignment = Assignment.find(params[:id])
+    end
+
+    def set_course
+      @course = Course.find(params[:id])
     end
 
     def assignment_params
