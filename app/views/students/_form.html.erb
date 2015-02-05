@@ -19,10 +19,10 @@
   <%= f.text_field :last_name, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :grade_level %> (numbers only)
-  <%= f.text_field :grade_level, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.number_field :grade_level, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :birthdate %> (numbers only)
-  <%= f.text_field :birthdate, class: 'datepicker form-control form-control-inline' %><br /><br />
+  <%= f.date_field :birthdate, class: 'datepicker form-control form-control-inline' %><br /><br />
 
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-primary" %>

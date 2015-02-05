@@ -21,16 +21,16 @@
   <%= f.text_field :title, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :date_created %>
-  <%= f.text_field :date_created, class: 'datepicker form-control form-control-inline' %><br /><br />
+  <%= f.date_field :date_created, class: 'datepicker form-control form-control-inline' %><br /><br />
 
   <%= f.label :date_due %>
-  <%= f.text_field :date_due, class: 'datepicker form-control form-control-inline' %><br /><br />
+  <%= f.date_field :date_due, class: 'datepicker form-control form-control-inline' %><br /><br />
 
   <%= f.label :category %>
   <%= f.text_field :category, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :total_points %>
-  <%= f.text_field :total_points, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.number_field :total_points, class: 'form-control form-control-inline' %><br /><br />
 
   <div class="actions">
       <%= f.submit "Submit", class:"btn btn-primary" %>

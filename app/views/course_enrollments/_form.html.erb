@@ -14,10 +14,10 @@
 <%= form_for @course_enrollment do |f| %>
 
 <%= f.label :course_ID %> (required)
-<%= f.text_field :course_id %><br /><br />
+<%= f.number_field :course_id %><br /><br />
 
 <%= f.label :student_ID %> (required)
-<%= f.text_field :student_id %><br /><br />
+<%= f.number_field :student_id %><br /><br />
 
 <% if current_page? new_course_enrollment_path %>
   <div class="actions">

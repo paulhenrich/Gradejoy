@@ -22,9 +22,9 @@
         <% @course.assignments.each do |assignment| %>
           <% grade = Grade.get_grade(student.id,assignment.id) %>
           <% if grade %>
-            <td><%= link_to grade.points_earned, edit_grade_route(@course.id, student.id, assignment.id), id: "edit grade", remote: true %></td>
+            <td><div id="grade_form"><%= link_to grade.points_earned, edit_grade_route(@course.id, student.id, assignment.id), id: "edit_grade", remote: true %></div></td>
           <% else %>
-            <td><%= link_to '---', new_grade_route(@course.id, student.id, assignment.id), id: "add grade", remote: true %></td>
+            <td><div id="grade_form"><%= link_to '---', new_grade_route(@course.id, student.id, assignment.id), id: "add_grade", remote: true %></div></td>
           <% end %>
         <% end %>
         <% end %>
