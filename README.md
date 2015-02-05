@@ -26,6 +26,7 @@ Feel free to contribute to this project! The Github Issues (scroll to top and lo
 
 1.Fork it.
 2. Clone it (`git clone https://github.com/YOUR_USERNAME/gradejoy.git`).
+
 3. Set the remote upstream(`git remote add upstream https://github.com/robertlandreaux/gradejoy.git`).
 4. Fetch the latest commits and branches (`git fetch upstream`).
 5. Check out your fork's local master branch (`git checkout master`).
