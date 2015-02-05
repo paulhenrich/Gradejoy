@@ -24,7 +24,7 @@ Comment on the Github page or email any questions, comments, or criticisms to ro
 
 Feel free to contribute to this project! The Github Issues (scroll to top and look right) contains tasks that need work.
 
-1.Fork it.
+1. Fork it.
 
 2. Clone it (`git clone https://github.com/YOUR_USERNAME/gradejoy.git`).
 
