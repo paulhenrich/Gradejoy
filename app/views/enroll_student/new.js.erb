@@ -1,3 +1,5 @@
 <% provide(:title, "Create and Enroll Student") %>
 $('#enroll_form').html("<%= j (render 'form') %>");
-$('#enroll_form').slideDown(350);
+$('#enroll_student').click(function(){
+  $('#enroll_form').toggle();
+});

@@ -4,11 +4,6 @@
     display: inline;
 }
 
-#assignment_form, #grade_form, #enroll_form, #course_form {
+#edit_assignment_form, #create_assignment_form, #grade_form, #enroll_form, #course_form {
   text-align: center;
-  display:none;
-}
-
-#assignments {
-  display:none;
 }

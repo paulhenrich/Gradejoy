@@ -1,3 +1,5 @@
 <% provide(:title, "Edit Course") %>
 $('#course_form').html("<%= j (render 'form') %>");
-$('#course_form').slideDown(350);
+$('#edit_course').click(function(){
+  $('#course_form').toggle();
+});

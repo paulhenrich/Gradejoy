@@ -1,2 +1,4 @@
 $('#assignment_buttons').html("<%= j (render 'buttons_ajax') %>");
-$('#assignment_buttons').slideDown(350);
+$('.assignment').click(function(){
+  $('#assignment_buttons').toggle();
+});
