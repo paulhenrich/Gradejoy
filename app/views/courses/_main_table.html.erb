@@ -15,16 +15,16 @@
     <tbody>
       <% @course.students.each do |student| %>
       <tr>
-        <td><%= link_to student.first_name, student %></td>
+        <td class="student" id="new_student"><%= link_to student.first_name, student, remote: true %></td>
         <td><%= student.last_name %></td>
         <td><%= student.grade_level %></td>
         <td>Average</td>
         <% @course.assignments.each do |assignment| %>
           <% grade = Grade.get_grade(student.id,assignment.id) %>
           <% if grade %>
-            <td><%= link_to grade.points_earned, edit_grade_route(@course.id, student.id, assignment.id) %></td>
+            <td><%= link_to grade.points_earned, edit_grade_route(@course.id, student.id, assignment.id), id: "edit grade", remote: true %></td>
           <% else %>
-            <td><%= link_to 'Add Grade', new_grade_route(@course.id, student.id, assignment.id), remote: true %></td>
+            <td><%= link_to '---', new_grade_route(@course.id, student.id, assignment.id), id: "add grade", remote: true %></td>
           <% end %>
         <% end %>
         <% end %>

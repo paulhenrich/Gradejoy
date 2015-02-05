@@ -1,5 +1,3 @@
 <% provide(:title, "Edit Assignment") %>
-$('#edit_assignment_form').html("<%= j (render 'form') %>");
-$('#edit_assignment').click(function(){
-  $('#edit_assignment_form').toggle();
-});
+$('#grade_form').html("<%= j (render 'form') %>");
+$('#grade_form').slideDown(350);

@@ -12,7 +12,6 @@
 <% end %>
 
 <%= form_for @grade,:url => @url, remote: true do |f| %>
-<h3>Create New Grade for <%= @student.first_name + ' ' + @student.last_name %>'s <%= @assignment.title %> </h3>
 <%= f.label :points_earned %> (required)
 <%= f.text_field :points_earned, class: 'form-control form-control-inline' %>
 <br /><br />

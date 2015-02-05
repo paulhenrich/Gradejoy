@@ -36,12 +36,12 @@ class StudentsController < ApplicationController
 
   def update
     @student.update(student_params)
-    respond_with(@student)
+    redirect_to(:back)
   end
 
   def destroy
     @student.destroy
-    respond_with(@student)
+    redirect_to(:back)
   end
 
   private

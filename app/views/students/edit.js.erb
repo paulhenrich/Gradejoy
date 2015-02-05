@@ -1,0 +1,5 @@
+<% provide(:title, "Edit Student") %>
+$('#edit_student_form').html("<%= j (render 'form') %>");
+$('#edit_student').click(function(){
+  $('#edit_student_form').toggle();
+});

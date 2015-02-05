@@ -39,7 +39,7 @@ class AssignmentsController < ApplicationController
 
   def destroy
     @assignment.destroy
-    respond_with(@assignment)
+    redirect_to(:back)
   end
 
   private

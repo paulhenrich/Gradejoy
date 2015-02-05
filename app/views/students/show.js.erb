@@ -1,0 +1,4 @@
+$('#student_buttons').html("<%= j (render 'buttons_ajax') %>");
+$('.student').click(function(){
+  $('#student_buttons').toggle();
+});
