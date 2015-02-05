@@ -34,7 +34,7 @@ class AssignmentsController < ApplicationController
 
   def update
     @assignment.update(assignment_params)
-    redirect_to @assignment
+    redirect_to(:back)
   end
 
   def destroy
