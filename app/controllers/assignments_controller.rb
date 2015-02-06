@@ -22,11 +22,10 @@ class AssignmentsController < ApplicationController
   end
 
   def create
-    @assignment = current_user.assignment.new(assignment_params)
-    @course = current_user.courses
+    @assignment = current_user.assignments.new(assignment_params)
 
     if @assignment.save
-      respond_with @course
+      redirect_to(:back)
     else
       render :new
     end

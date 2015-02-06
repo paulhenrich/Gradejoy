@@ -21,13 +21,13 @@
   <%= f.text_field :name, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :time_of_day %>
-  <%= f.time_field :time, class: 'timepicker form-control form-control-inline' %><br /><br />
+  <%= f.time_select :time %><br /><br />
 
   <%= f.label :period %>
-  <%= f.text_field :period, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.number_field :period, class: 'form-control form-control-inline' %><br /><br />
 
   <%= f.label :section %>
-  <%= f.text_field :section, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.number_field :section, class: 'form-control form-control-inline' %><br /><br />
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-primary" %>
   </div>
