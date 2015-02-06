@@ -24,10 +24,11 @@
   <%= f.time_select :time %><br /><br />
 
   <%= f.label :period %>
-  <%= f.number_field :period, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.select :period, ("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>").html_safe %><br /><br />
 
   <%= f.label :section %>
-  <%= f.number_field :section, class: 'form-control form-control-inline' %><br /><br />
+  <%= f.select :section, ("<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>").html_safe %><br /><br />
+
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-primary" %>
   </div>
