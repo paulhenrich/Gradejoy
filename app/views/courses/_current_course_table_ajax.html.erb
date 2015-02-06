@@ -4,7 +4,7 @@
       <tr>
         <th>Course Name</th>
         <th>Course ID</th>
-        <th>Time</th>
+        <th>Time of Day</th>
         <th>Period</th>
         <th>Section</th>
         <th>Created</th>
@@ -15,7 +15,7 @@
       <tr>
         <td><%= @course.name %></td>
         <td><%= @course.id %></td>
-        <td><%= @course.time %></td>
+        <td><%= @course.time.strftime("%H:%M") %></td>
         <td><%= @course.period %></td>
         <td><%= @course.section %></td>
         <td><%= @course.created_at %></td>
