@@ -18,6 +18,7 @@ Gradejoy::Application.routes.draw do
   get "terms" => "pages#terms"
   get "account" => "pages#account"
   get "communication" => "pages#communication"
+  get "nojs" => "pages#nojs"
 
   root "pages#index"
 

@@ -22,5 +22,8 @@ class PagesController < ApplicationController
 
   def account
   end
-  
+
+  def nojs
+  end
+
 end
