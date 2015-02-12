@@ -1,3 +1,5 @@
 <% provide(:title, "Enter Grade") %>
 $('#add_grade_form').html("<%= j (render 'form') %>");
-$('#add_grade_form').slideDown(350);
+$('#add_grade').click(function(){
+  $('#add_grade_form').toggle();
+});
