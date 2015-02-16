@@ -25,7 +25,8 @@
  body {
    padding-top: 5em;
    height: 100%;
-   /*background-color: #EBFFEB;*/
+   /* MARDI GRAS THEME */
+   background-color: #EBFFEB;
  }
 
  img {
@@ -35,9 +36,9 @@
 
  }
 
- /*.navbar {
-   background-color: #E6E6FF
- }*/
+/* MARDI GRAS THEME */ .navbar {
+   background-color: #E6E6FF;
+ }
 
  .navbar-brand {
    font-size: 160%;
@@ -47,6 +48,7 @@
 
  .jumbotron {
    text-align: center;
+   /* MARDI GRAS THEME */ background-color: #FFFF94;
  }
 
  #wrap {
@@ -63,7 +65,7 @@
 
  #footer p {
    height: 1em;
-   background-color: #f5f5f5;
+   /* MARDI GRAS THEME */ background-color: #E6E6FF;
    padding: 1% 2% 3% 2%;
    text-align: center;
    font-size: .75em;
