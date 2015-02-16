@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150206191728) do
+ActiveRecord::Schema.define(version: 20150216192625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20150206191728) do
   add_index "assignments", ["title"], name: "index_assignments_on_title", using: :btree
   add_index "assignments", ["total_points"], name: "index_assignments_on_total_points", using: :btree
   add_index "assignments", ["user_id"], name: "index_assignments_on_user_id", using: :btree
+
+  create_table "categories", force: true do |t|
+    t.string   "category"
+    t.decimal  "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "categories", ["category"], name: "index_categories_on_category", using: :btree
+  add_index "categories", ["weight"], name: "index_categories_on_weight", using: :btree
 
   create_table "course_assignments", force: true do |t|
     t.integer "course_id"

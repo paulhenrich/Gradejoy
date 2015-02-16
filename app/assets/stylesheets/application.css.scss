@@ -15,18 +15,14 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- html, body {
+ html {
   height: 100%;
-  body {
-    padding-top: 5em;
-  }
 }
 
  body {
    padding-top: 5em;
    height: 100%;
-   /* MARDI GRAS THEME */
-   background-color: #EBFFEB;
+   /* MARDI GRAS THEME */ background-color: #D1FFD1;
  }
 
  img {
@@ -48,7 +44,7 @@
 
  .jumbotron {
    text-align: center;
-   /* MARDI GRAS THEME */ background-color: #FFFF94;
+   /* MARDI GRAS THEME */ background-color: #FFFFC4;
  }
 
  #wrap {

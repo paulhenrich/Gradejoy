@@ -42,6 +42,8 @@
 <br />
 <%= link_to "Create New Assignment", new_course_assignment_route(@course.id), class: "btn btn-danger", id: "create_course_assignment", remote: true %> <br /><br />
 
+<%= link_to "Assignment Categories", course_path, class: "btn btn-success" %> (Feature in progress)<br /><br />
+
 <%= link_to "Create and Enroll New Student", new_enroll_student_route(@course.id), class: "btn btn-info", id: "enroll_student", remote: true %> <br /><br />
 
 <%= link_to 'Back to Courses List', courses_path, class: "btn btn-primary" %>

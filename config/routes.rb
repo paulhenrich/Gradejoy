@@ -1,5 +1,7 @@
 Gradejoy::Application.routes.draw do
 
+  resources :categories
+
   devise_for :admins
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
