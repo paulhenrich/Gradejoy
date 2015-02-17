@@ -1,30 +1,14 @@
 <% provide(:title, "Assignment Categories") %>
 <h1>Assignment Categories</h1>
 
-<div class="table-responsive" id="assignment-categories">
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Category</th>
-        <th>Weight</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @categories.each do |category| %>
-        <tr>
-          <td id="show-category-buttons"><%= link_to category.category, category, remote: true %></td>
-          <td><%= category.weight %>%</td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<%= render 'categories_table' %>
 
 <br />
 
 <div id="category-buttons"></div>
+<br />
+<div id="category-form"></div>
 
-<%= link_to 'New Category', new_category_path, class: "btn btn-success" %><br /><br />
+<%= link_to 'New Category', new_category_path, class: "btn btn-success", id: "new-category", remote: true %><br /><br />
 
 <%= link_to 'Back to Courses', courses_path, class: "btn btn-primary" %>

@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-
-  respond_to :html
+  before_action :authorized_user, except: [:index, :new, :create]
+  before_filter :authenticate_user!
+  respond_to :html, :js
 
   def index
-    @categories = Category.all
+    @categories = current_user.categories
     respond_with(@categories)
   end
 
@@ -13,7 +14,7 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @category = Category.new
+    @category = current_user.categories.new
     respond_with(@category)
   end
 
@@ -21,9 +22,13 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = Category.new(category_params)
-    @category.save
-    respond_with(@category)
+    @category = current_user.categories.new(category_params)
+    @categories = current_user.categories
+    if @category.save
+      respond_with(@categories)
+    else
+      render :new
+    end
   end
 
   def update
@@ -43,5 +48,10 @@ class CategoriesController < ApplicationController
 
     def category_params
       params.require(:category).permit(:category, :weight)
+    end
+
+    def authorized_user
+      @category = current_user.categories.find_by(id: params[:id])
+      redirect_to categories_path, notice: "Not authorized to view that category" if @category.nil?
     end
 end

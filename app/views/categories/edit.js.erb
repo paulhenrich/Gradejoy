@@ -1,5 +1,5 @@
-<% provide(:title, "New Category") %>
+<% provide(:title, "Edit Category") %>
 $('#category-form').html("<%= j (render 'form') %>");
-$('#new-category').click(function(){
+$('#edit-category').click(function(){
   $('#category-form').toggle();
 });
