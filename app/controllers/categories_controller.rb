@@ -33,7 +33,8 @@ class CategoriesController < ApplicationController
 
   def update
     @category.update(category_params)
-    respond_with(@category)
+    @categories = current_user.categories
+    respond_with(@categories)
   end
 
   def destroy

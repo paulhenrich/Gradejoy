@@ -9,63 +9,23 @@
 <h2>Gradebook</h2>
 <br />
 <h4>Current Courses </h4>
-<div class="table-responsive" id="courses-table">
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Course Name</th>
-        <th>Course ID</th>
-        <th>Time</th>
-        <th>Period</th>
-        <th>Section</th>
-        <th>Created</th>
-        <th>Number of Students</th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @courses.each do |course| %>
-      <tr>
-        <td><%= link_to course.name, course %></td>
-        <td><%= course.id %></td>
-        <td><%= course.time %></td>
-        <td><%= course.period %></td>
-        <td><%= course.section %></td>
-        <td><%= course.created_at %></td>
-        <td><%= course.students.all.count %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<%= render 'courses_table' %>
 
-<div id="courses"></div>
+<div id="updated-courses"></div>
+
+<div id="course_form"></div><br />
 
 <%= link_to 'Create New Course', new_course_path, class: "btn btn-primary", id: "create_course", remote: true %> <br /><br />
 
 <%= link_to "Assignment Categories", categories_path, class: "btn btn-success" %> (Feature in progress)<br /><br />
 
-<div id="course_form"></div>
+<!-- <%= link_to 'My Students', students_path, class: "btn btn-success " %> <br /><br />
+
+<%= link_to "My Assignments", assignments_path, class: "btn btn-danger " %> <br /><br />
 
 <h4>Archived Courses (not a feature yet)</h4>
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Course Name</th>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @courses.each do |course| %>
-      <tr>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
-<%#<%= link_to 'My Students', students_path, class: "btn btn-success " %> <br /><br />
+<%= render 'archived_courses' %>
 
-<%#<%= link_to "My Assignments", assignments_path, class: "btn btn-danger " %> <br /><br />
-
-<%#<%= link_to "My Course Enrollments", course_enrollments_path, class: "btn btn-info" %><br /><br />
+<%= link_to "My Course Enrollments", course_enrollments_path, class: "btn btn-info" %><br /><br /> -->
