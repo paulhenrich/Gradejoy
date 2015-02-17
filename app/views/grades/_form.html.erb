@@ -11,11 +11,9 @@
 </div>
 <% end %>
 
-<%= form_for @grade,:url => @url, remote: true do |f| %>
-<%= f.number_field :points_earned, class: 'form-control grade-field' %>
-<br /><br />
-<div class="actions">
-  <%= f.submit "Submit", class:"btn btn-xs btn-primary" %>
-</div>
-<% end %>
+  <%= f.number_field :points_earned, class: 'form-control grade-field' %>
+  <br /><br />
+  <div class="actions">
+    <%= f.submit "Submit", class:"btn btn-xs btn-primary" %>
+  </div>
 <% end %>

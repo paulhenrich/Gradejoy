@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-  <%= form_for @course, remote: true do |f| %>
   <% if current_page? new_course_path %>
     <h3>Create New Course</h3>
   <% else %>
@@ -32,5 +31,5 @@
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-primary" %>
   </div>
-  <% end %>
+
 <% end %>

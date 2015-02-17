@@ -29,7 +29,7 @@ class GradesController < ApplicationController
   def update
     @grade = Grade.get_grade(params[:student_id],params[:assignment_id])
     @grade.update(grade_params)
-    redirect_to course_path(params[:id])
+    respond_with(@course)
   end
 
   def destroy

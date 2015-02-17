@@ -11,7 +11,6 @@
     </div>
   <% end %>
 
-  <%= form_for @student, :url => @url, remote: true do |f| %>
   <% if current_page? new_enroll_student_route(@course.id) %>
     <h3>Add New Student</h3>
   <% else %>
@@ -32,5 +31,4 @@
   <div class="actions">
     <%= f.submit "Submit", class:"btn btn-primary" %>
   </div>
-<% end %>
 <% end %>

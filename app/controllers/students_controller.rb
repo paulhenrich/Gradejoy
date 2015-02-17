@@ -1,5 +1,6 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_course, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
   before_action :authorized_user, except: [:index, :new, :create]
   respond_to :html, :js
@@ -35,7 +36,7 @@ class StudentsController < ApplicationController
 
   def update
     @student.update(student_params)
-    redirect_to(:back)
+    respond_with(@course)
   end
 
   def destroy
@@ -46,6 +47,10 @@ class StudentsController < ApplicationController
   private
     def set_student
       @student = Student.find(params[:id])
+    end
+
+    def set_course
+      @course = Course.find(params[:id])
     end
 
     def student_params
