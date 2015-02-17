@@ -1,29 +1,28 @@
-<h1>Listing categories</h1>
+<% provide(:title, "Assignment Categories") %>
+<h1>Assignment Categories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Weight</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
+<div class="table-responsive" id="assignment-categories">
+  <table class="table table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= category.category %></td>
-        <td><%= category.weight %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Category</th>
+        <th>Weight</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= link_to category.category, category %></td>
+          <td><%= category.weight %>%</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'New Category', new_category_path %>
+<br />
+
+<%= link_to 'New Category', new_category_path, class: "btn btn-success" %><br /><br />
+
+<%= link_to 'Back to Courses', courses_path, class: "btn btn-primary" %>

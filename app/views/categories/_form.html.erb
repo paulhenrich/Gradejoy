@@ -13,13 +13,16 @@
 
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.text_field :category, class: 'form-control form-control-inline' %>
   </div>
   <div class="field">
     <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
+    <%= f.number_field :weight, class: 'form-control form-control-inline' %>
   </div>
+
+  <br />
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>
+<br />
