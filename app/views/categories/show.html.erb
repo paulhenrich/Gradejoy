@@ -1,14 +1,25 @@
+<% provide(:title, "Assignment Category") %>
 <p id="notice"><%= notice %></p>
+<h1><%= @category.category %></h1>
+<div class="table-responsive" id="assignment-categories">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>Category:</strong>
-  <%= @category.category %>
-</p>
+    <tbody>
 
-<p>
-  <strong>Weight:</strong>
-  <%= @category.weight %>
-</p>
+        <tr>
+          <td><%= @category.category %></td>
+          <td><%= @category.weight %>%</td>
+        </tr>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "Edit #{@category.category}", edit_category_path(@category), class: "btn btn-danger" %><br /><br />
+<%= link_to 'Back', categories_path, class: "btn btn-primary" %>

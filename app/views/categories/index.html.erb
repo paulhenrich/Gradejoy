@@ -13,7 +13,7 @@
     <tbody>
       <% @categories.each do |category| %>
         <tr>
-          <td><%= link_to category.category, category %></td>
+          <td id="show-category-buttons"><%= link_to category.category, category, remote: true %></td>
           <td><%= category.weight %>%</td>
         </tr>
       <% end %>
@@ -22,6 +22,8 @@
 </div>
 
 <br />
+
+<div id="category-buttons"></div>
 
 <%= link_to 'New Category', new_category_path, class: "btn btn-success" %><br /><br />
 

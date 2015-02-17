@@ -1,6 +1,6 @@
-<h1>Editing category</h1>
+<% provide(:title, "Edit Category") %>
+<h1>Edit <%= @category.category %> Category</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Back to Categories', categories_path, class: "btn btn-primary" %>
