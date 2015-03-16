@@ -41,8 +41,6 @@ gem 'omniauth-digitalocean',   '~> 0.1.0'
 gem 'rake',                    '~> 10.4.2'
 
 group :development, :test do
-  gem 'rspec',                    '~> 3.1.0'
-  gem 'rspec-rails',              '~> 3.1.0'
   gem 'capybara',                 '~> 2.4.4'
 end
 
